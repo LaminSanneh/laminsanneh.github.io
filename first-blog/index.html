@@ -4,24 +4,24 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/layouts/main.css>
-<link rel=stylesheet href=/css/navigators/navbar.css>
-<link rel=stylesheet href=/css/plyr.css>
-<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href=/hugo-site/css/bootstrap.min.css>
+<link rel=stylesheet href=/hugo-site/css/layouts/main.css>
+<link rel=stylesheet href=/hugo-site/css/navigators/navbar.css>
+<link rel=stylesheet href=/hugo-site/css/plyr.css>
+<link rel=stylesheet href=/hugo-site/css/flag-icon.min.css>
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
 <meta property="og:title" content="First Blog">
 <meta property="og:description" content="My first blog">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://example.org/first-blog/"><meta property="article:section" content>
+<meta property="og:url" content="http://laminsanneh.com/hugo-site/first-blog/"><meta property="article:section" content>
 <meta property="article:published_time" content="2021-09-18T06:51:28-07:00">
 <meta property="article:modified_time" content="2021-09-18T06:51:28-07:00">
 <meta name=description content="First Blog">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
-<link rel=stylesheet href=/css/layouts/single.css>
-<link rel=stylesheet href=/css/navigators/sidebar.css>
-<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/hugo-site/css/layouts/single.css>
+<link rel=stylesheet href=/hugo-site/css/navigators/sidebar.css>
+<link rel=stylesheet href=/hugo-site/css/style.css>
 </head>
 <body data-spy=scroll data-target=#TableOfContents data-offset=80>
 <div class="container-fluid bg-dimmed wrapper">
@@ -30,7 +30,7 @@
 <button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
 <span class=navbar-toggler-icon></span>
 </button>
-<a class=navbar-brand href=/>
+<a class=navbar-brand href=/hugo-site>
 My New Hugo Site</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
 <span class=navbar-toggler-icon></span>
@@ -44,12 +44,12 @@ My New Hugo Site</a>
 <section class=sidebar-section id=sidebar-section>
 <div class=sidebar-holder>
 <div class=sidebar id=sidebar>
-<form class=mx-auto method=get action=/search>
+<form class=mx-auto method=get action=/hugo-site/search>
 <input type=text name=keyword placeholder=Search data-search id=search-box>
 </form>
 <div class=sidebar-tree>
 <ul class=tree id=tree>
-<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<li id=list-heading><a href=/hugo-site/posts data-filter=all>Posts</a></li>
 <div class=subtree>
 </div>
 </ul>
@@ -60,11 +60,11 @@ My New Hugo Site</a>
 <section class=content-section id=content-section>
 <div class=content>
 <div class="container p-0 read-area">
-<div class="hero-area col-sm-12" id=hero-area style=background-image:url(http://example.org/images/default-hero.jpg)>
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(http://laminsanneh.com/hugo-site/hugo-site/images/default-hero.jpg)>
 </div>
 <div class=page-content>
 <div class="author-profile ml-auto align-self-lg-center">
-<img class=rounded-circle src=/images/default-avatar_hu9bf48a08e17db6472c2e32b73058a6bb_47653_120x120_fit_box_3.png alt="Author Image">
+<img class=rounded-circle src=/hugo-site/images/default-avatar_hu9bf48a08e17db6472c2e32b73058a6bb_47653_120x120_fit_box_3.png alt="Author Image">
 <h5 class=author-name></h5>
 <p>September 18, 2021</p>
 </div>
@@ -97,7 +97,7 @@ My New Hugo Site</a>
 <form method=post action=https://blogtrottr.com>
 <div class=form-group>
 <input type=email class=form-control name=btr_email placeholder="Enter email"><br>
-<input type=hidden name=btr_url value=http://example.org/index.xml>
+<input type=hidden name=btr_url value=http://laminsanneh.com/hugo-site/index.xml>
 <input type=hidden name=schedule_type value=1>
 <small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
 <button type=submit class="btn btn-info"> Submit </button>
@@ -110,27 +110,27 @@ My New Hugo Site</a>
 <div class="row text-left">
 <div class=col-md-4>
 <a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
-<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+<img src=/hugo-site/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
 Toha
 </a>
 </div>
 <div class="col-md-4 text-center">© 2021 Copyright.</div>
 <div class="col-md-4 text-right">
 <a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+<img src=/hugo-site/images/hugo-logo.svg alt="Hugo Logo" height=18>
 </a>
 </div>
 </div>
 </div>
 </footer>
-<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
-<script type=text/javascript src=/js/popper.min.js></script>
-<script type=text/javascript src=/js/bootstrap.min.js></script>
-<script type=text/javascript src=/js/navbar.js></script>
-<script type=text/javascript src=/js/plyr.js></script>
-<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/hugo-site/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/hugo-site/js/popper.min.js></script>
+<script type=text/javascript src=/hugo-site/js/bootstrap.min.js></script>
+<script type=text/javascript src=/hugo-site/js/navbar.js></script>
+<script type=text/javascript src=/hugo-site/js/plyr.js></script>
+<script type=text/javascript src=/hugo-site/js/main.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
-<script src=/js/single.js></script>
+<script src=/hugo-site/js/single.js></script>
 <script>hljs.initHighlightingOnLoad()</script>
 </body>
 </html>
