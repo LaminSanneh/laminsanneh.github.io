@@ -1,4 +1,4 @@
-baseURL = 'http://laminsanneh.com/hugo-site/'
+baseURL = 'http://laminsanneh.com/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme="toha"
