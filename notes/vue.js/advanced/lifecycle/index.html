@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Notes</title>
+<title>Lifecycle Hooks</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
@@ -11,10 +11,10 @@
 <link rel=stylesheet href=/css/flag-icon.min.css>
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<meta property="og:title" content="Notes">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://laminsanneh.com/notes/">
+<meta property="og:title" content="Lifecycle Hooks">
+<meta property="og:description" content="Lifecycle Hooks beforeCreate created beforeMount mounted beforeUpdate updated beforeDestroy destroyed     ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/advanced/lifecycle/"><meta property="article:section" content="notes">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
 <link rel=stylesheet href=/css/layouts/notes.css>
 <link rel=stylesheet href=/css/navigators/sidebar.css>
@@ -48,8 +48,8 @@ Lamin Sanneh</a>
 <li id=list-heading><a href=/notes data-filter=all>Notes</a></li>
 <div class=subtree>
 <li>
-<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/>Vue.js</a>
-<ul>
+<i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/>Vue.js</a>
+<ul class=active>
 <li>
 <i class="fas fa-plus-circle"></i><a href=/notes/vue.js/basic/>Basic</a>
 <ul>
@@ -58,9 +58,9 @@ Lamin Sanneh</a>
 </ul>
 </li>
 <li>
-<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a>
-<ul>
-<li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
+<i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/advanced/>Advanced</a>
+<ul class=active>
+<li><a class=active href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
 </ul>
 </li>
 </ul>
@@ -80,28 +80,22 @@ Lamin Sanneh</a>
 <section class=content-section id=content-section>
 <div class="content container-fluid" id=content>
 <div class="container-fluid note-card-holder" id=note-card-holder>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Lifecycle Hooks</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>beforeCreate</span>
+<span style=color:#a6e22e>created</span>
+<span style=color:#a6e22e>beforeMount</span>
+<span style=color:#a6e22e>mounted</span>
+<span style=color:#a6e22e>beforeUpdate</span>
+<span style=color:#a6e22e>updated</span>
+<span style=color:#a6e22e>beforeDestroy</span>
+<span style=color:#a6e22e>destroyed</span>
+</code></pre></div></div>
 </div>
-<div class=paginator>
-<ul class="pagination pagination-default">
-<li class=page-item>
-<a href=/notes/ aria-label=First class=page-link role=button><span aria-hidden=true>&#171;&#171;</span></a>
-</li>
-<li class=page-item>
-<a href=/notes/ aria-label=Previous class=page-link role=button><span aria-hidden=true>&#171;</span></a>
-</li>
-<li class=page-item>
-<a href=/notes/ aria-label="Page 1" class=page-link role=button>1</a>
-</li>
-<li class="page-item active">
-<a href=# aria-current=page aria-label="Page 2" class=page-link role=button>2</a>
-</li>
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=Next class=page-link role=button tabindex=-1><span aria-hidden=true>&#187;</span></a>
-</li>
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=Last class=page-link role=button tabindex=-1><span aria-hidden=true>&#187;&#187;</span></a>
-</li>
-</ul>
+</div>
+</div>
 </div>
 </div>
 </section>

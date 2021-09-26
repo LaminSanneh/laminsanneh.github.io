@@ -27,7 +27,7 @@
 <span class=navbar-toggler-icon></span>
 </button>
 <a class=navbar-brand href=/>
-My New Hugo Site</a>
+Lamin Sanneh</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
 <span class=navbar-toggler-icon></span>
 </button>
@@ -47,6 +47,30 @@ My New Hugo Site</a>
 <ul class=tree id=tree>
 <li id=list-heading><a href=/notes data-filter=all>Notes</a></li>
 <div class=subtree>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/>Vue.js</a>
+<ul>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/basic/>Basic</a>
+<ul>
+<li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
+<li><a href=/notes/vue.js/basic/binding/ title=Bindings>Bindings</a></li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a>
+<ul>
+<li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/bash/>Bash</a>
+<ul>
+<li><a href=/notes/bash/basic/ title=Variables>Variables</a></li>
+</ul>
+</li>
 </div>
 </ul>
 </div>
@@ -56,6 +80,87 @@ My New Hugo Site</a>
 <section class=content-section id=content-section>
 <div class="content container-fluid" id=content>
 <div class="container-fluid note-card-holder" id=note-card-holder>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Expressions</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;app&#34;</span>&gt;
+  &lt;<span style=color:#f92672>p</span>&gt;I have a {{ product }}&lt;/<span style=color:#f92672>p</span>&gt;
+  &lt;<span style=color:#f92672>p</span>&gt;{{ product + &#39;s&#39; }}&lt;/<span style=color:#f92672>p</span>&gt;
+  &lt;<span style=color:#f92672>p</span>&gt;{{ isWorking ? &#39;YES&#39; : &#39;NO&#39; }}&lt;/<span style=color:#f92672>p</span>&gt;
+  &lt;<span style=color:#f92672>p</span>&gt;{{ product.getSalePrice() }}&lt;/<span style=color:#f92672>p</span>&gt;
+&lt;/<span style=color:#f92672>div</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Binding</span></h5>
+<div class=card>
+<div class=card-body><p>Fullhand</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>v-bind:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
+</code></pre></div><p>Shorthand</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Binding2</span></h5>
+<div class=card>
+<div class=card-body><p>True or false will add or remove attribute:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>:disabled</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;isButtonDisabled”</span>&gt;...
+</code></pre></div><p>If isActive is truthy, the class ‘active’ will appear:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ active: isActive }&#34;</span>&gt;...
+</code></pre></div><p>Style color set to value of activeColor:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ color: activeColor }&#34;</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Lifecycle Hooks</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>beforeCreate</span>
+<span style=color:#a6e22e>created</span>
+<span style=color:#a6e22e>beforeMount</span>
+<span style=color:#a6e22e>mounted</span>
+<span style=color:#a6e22e>beforeUpdate</span>
+<span style=color:#a6e22e>updated</span>
+<span style=color:#a6e22e>beforeDestroy</span>
+<span style=color:#a6e22e>destroyed</span>
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Variable</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>NAME<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;John&#34;</span>
+echo $NAME
+echo <span style=color:#e6db74>&#34;</span>$NAME<span style=color:#e6db74>&#34;</span>
+echo <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NAME<span style=color:#e6db74>}</span><span style=color:#e6db74>
+</span></code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Condition</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> -z <span style=color:#e6db74>&#34;</span>$string<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+  echo <span style=color:#e6db74>&#34;String is empty&#34;</span>
+<span style=color:#66d9ef>elif</span> <span style=color:#f92672>[[</span> -n <span style=color:#e6db74>&#34;</span>$string<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+  echo <span style=color:#e6db74>&#34;String is not empty&#34;</span>
+<span style=color:#66d9ef>fi</span>
+</code></pre></div></div>
+</div>
+</div>
+</div>
 </div>
 <div class=paginator>
 <ul class="pagination pagination-default">
@@ -87,17 +192,20 @@ My New Hugo Site</a>
 <div class="row text-left">
 <div class="col-md-4 col-sm-12">
 <h5>Navigation</h5>
-</div>
-<div class="col-md-4 col-sm-12">
-<p>Stay up to date with email notification</p>
-<form method=post action=https://blogtrottr.com>
-<div class=form-group>
-<input type=email class=form-control name=btr_email placeholder="Enter email"><br>
-<input type=hidden name=btr_url value=http://laminsanneh.com/index.xml>
-<input type=hidden name=schedule_type value=1>
-<small id=emailHelp class="form-text text-muted">By entering your email address, you agree to receive the newsletter of this website.</small>
-<button type=submit class="btn btn-info"> Submit </button>
-</form>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=/#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#skills>Skills</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#experiences>Experiences</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=/#education>Education</a>
+</li>
+</ul>
 </div>
 </div>
 </div>
