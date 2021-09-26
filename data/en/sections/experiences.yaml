@@ -1,0 +1,106 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: Yaraku
+    url: "https://www.yaraku.com"
+    location: Tokyo, Japan
+    # company overview
+    overview: A translation company based in tokyo, providing software services for companies internationally.
+  positions:
+  - designation: Frontend Developer
+    start: Apr 2016
+    end: Mar 2021
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Design and develop frontend widgets for items like lists, pagination, popups, tutorial guides
+    - Connect frontend components to backend apis and add error handling
+    - Develop system using Backbone.js, Angular.js, and React.js
+    - Helped in transitioning the system incrementally to use React.js
+    - Design and develop main app's backend systems for email templates, create tests, database schemas and create apis for the frontend
+    - Led the design and development of the main company website(http://www.yaraku.com) and main app website(https://www.yarakuzen.com/en)
+    - Maintained and optimized our websites for S.E.O. using google analytics, google webmaster and google tag manager
+
+  # - designation: Junior Software Engineer
+  #   start: Nov 2017
+  #   end: Oct 2019
+  #   responsibilities:
+  #   - Implement and test xyz feature for abc tool.
+  #   - Support client for abc tool.
+  #   - Learn k,d,w technology for xyz.
+
+- company:
+    name: SuprTickets
+    url: "https://twitter.com/suprtickets"
+    location: Manchester, UK (Freelance Contract)
+    overview: A website which aggregates ticket prices of events(music concerts, sports, e.t.c.) from several apis and offers the results in a single website to the customer
+  positions:
+  - designation: Web Developer
+    start: Dec 2015
+    end: March 2016
+    responsibilities:
+    - Redesigned the frontend interface with new requirements as specified.
+    - Fixed broken search future when I took on the contract.
+    - Also, had to clean up and refactor the frontend html, css, javascript(jQuery) and backend code(php, bash and mysql)
+    - Worked with imported api data files in the form of csv from several other ticket vendors.
+    - Built bash scripts which ran periodically as cron jobs to import the csv directly into the database for efficiency.
+    - Organized the different imported data formats from the several vendors in the database in proper formats suitable for easier universal querying.
+    - Added index to the database to to optimize search and make the website work faster.
+
+- company:
+    name: Open Business Solutions
+    # url: "https://www.example.com"
+    location: Singapore
+    overview: A software company providing customized Enterprise ReResource Planning(ERP) solutions to companies to help them carry on their unique processes in their business.
+  positions:
+  - designation: Fullstack developer
+    start: Dec 2014
+    end: Dec 2015
+    responsibilities:
+    - Worked with Angular.js, Node.js and Meteor.js to create kanban board based system (similar to trello) for each company's requirement.
+    - I was responsible for creating frontend widgets for each phase of the kanban board.
+    - We used coffeescript in the backend
+    - Worked as part of the team responsible for converting the app from direct Node.js to Meteor.js as it had a more powerful realtime update system as the changes needed to be reflected for each user in realtime.
+    - Worked on creating integration tests for both frontend and backend which would have to pass before the code is deployed.
+    - Later, I worked on a project to make a drag and drop type system so customers can create (on their own), their own set of customized fields (texts, file upload, checkboxes e.t.c.) for each stage of their process corresponding to each kanban board card
+
+- company:
+    name: Freelance(during University final year)
+    # url: "https://www.example.com"
+    location: Manchester
+    overview: Worked remotely as a freelancer.
+  positions:
+  - designation: Web developer
+    start: July 2013
+    end: Aug 2014
+    responsibilities:
+    - Worked as a freelance working on several small projects ranging from wordpress development, single page app development using Ember.js, and Php framework called Octobercms.
+    - I built an event planner app for a team in Australia, remotely, using Ember.js, my favorite framework during this time.
+    - I also did my dissertation by using Ember.js and Laravel as this work period conincided with my final year in University.
+    - I also used some of the time to build my yputube channel with more tutorials.
+
+# - company:
+#     name: RnR Innovations
+#     # url: "https://www.example.com"
+#     location: London
+#     overview: A music company in the same category of the likes of spotify, deezer.
+#   positions:
+#   - designation: Web Developer - Frontend concept developer (Internship)
+#     start: May 2013
+#     end: July 2014
+#     responsibilities:
+#     - Worked as a freelance working on several small projects ranging from wordpress development, single page app development using Ember.js, and Php framework called Octobercms.
+#     - I built an event planner app for a team in Australia, remotely, using Ember.js, my favorite framework during this time.
+#     - I also did my dissertation by using Ember.js and Laravel as this work period conincided with my final year in University.
+#     - I also used some of the time to build my yputube channel with more tutorials.
