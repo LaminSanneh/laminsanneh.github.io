@@ -24,13 +24,15 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop frontend widgets for items like lists, pagination, popups, tutorial guides
-    - Connect frontend components to backend apis and add error handling
-    - Develop system using Backbone.js, Angular.js, and React.js
-    - Helped in transitioning the system incrementally to use React.js
-    - Design and develop main app's backend systems for email templates, create tests, database schemas and create apis for the frontend
+    - Design and develop frontend widgets for items like lists, pagination, popups, tutorial guides.
+    - Connect frontend components to backend apis and add error handling.
+    - Write maintainable code using best practises like SOLID principles.
+    - Develop frontend system using a combination of Backbone.js, Angular.js, and React.js.
+    - Helped in transitioning the frontend system incrementally to use React.js.
+    - Design and develop main app's backend systems for email templates, create tests, database schemas and create apis for the frontend.
+    - Overtime, maintained the test and build pipeline using jenkins and docker.
     - Led the design and development of the main company website(http://www.yaraku.com) and main app website(https://www.yarakuzen.com/en)
-    - Maintained and optimized our websites for S.E.O. using google analytics, google webmaster and google tag manager
+    - Maintained and optimized our websites for S.E.O. using google analytics, google webmaster and google tag manager.
 
   # - designation: Junior Software Engineer
   #   start: Nov 2017
@@ -46,7 +48,7 @@ experiences:
     location: Manchester, UK (Freelance Contract)
     overview: A website which aggregates ticket prices of events(music concerts, sports, e.t.c.) from several apis and offers the results in a single website to the customer
   positions:
-  - designation: Web Developer
+  - designation: Fullstack Developer
     start: Dec 2015
     end: March 2016
     responsibilities:
@@ -64,7 +66,7 @@ experiences:
     location: Singapore
     overview: A software company providing customized Enterprise ReResource Planning(ERP) solutions to companies to help them carry on their unique processes in their business.
   positions:
-  - designation: Fullstack developer
+  - designation: Fullstack Developer
     start: Dec 2014
     end: Dec 2015
     responsibilities:
@@ -100,8 +102,9 @@ experiences:
     start: May 2013
     end: July 2013
     responsibilities:
+    - I was involved with taking design concepts through rapid prototype phases to see if they were feasible to be implemented for production.
     - Worked with the said music company above. While there, I had to create frontend prototypes using jQuery, Ember.js, vanilla Js, SASS CSS and HTML.
-    - This was so that we could give concept overview to our investors and partners before the final products are to be developed.
+    - This was so that we could give interactive concept demonstrations to our investors and partners before the final products are to be developed.
     - I collaborated with the team in Kiev(Ukraine), as the company was based in London but had other international headquarters in USA, Spain and Ukraine
     - I also had to collaborate with graphic designers, UX designers who were from different parts of Europe in-house to create prototypes.
     - This was around teh time when responsive design was a big buzzword and I was invited to give a presentation on it to the rest of the company by my manager, which was a valuable experience to me as I had to explain the concept to non-programmers as well.
@@ -122,7 +125,7 @@ experiences:
     - Sometimes, before a feature was completed, I had to write some complex SQL to export the report in excel format so the in-house client can carry out their task.
     - The application features went through several stages of development, alpha and testing before being released to the end user.
     - I gained valuable experience using C# which I self-learned. Using entity framework was really fun and it opened a whole new world of experience when it came to software development and interfacing with the database.
-    - I also enjoyed using linq technology from microsoft.
+    - I gained valuable experience while working there, not just technically but also how to work better and more efficiently in a team.
 
 - company:
     name: Travel Indigo(Part time)
@@ -135,13 +138,14 @@ experiences:
     end: 2012
     responsibilities:
     - While at University, I worked parttime for a travel agency called Travel Indigo, which specializes in group travel internationally and hotel bookings.
-    - I and another webdeveloper were responsible for building the initial version of the travel website.
+    - I and another webd eveloper were responsible for building the initial version of the travel website.
     - We had to tap into several apis, primarily travelport, which at that stage only supported xml results(now I believe they do json).
     - The xml is parsed using php libraries(Zend framework) and stored in a more manageable format in our database.
-    - We had to setup a system which caches the results which the user searches so we donot hit the api again.
+    - We had to setup a system which used advanced ajax to make backend calls.
+    - The backend then caches the results which the user searches so we do not hit the external APIs unnecessarily.
     - We also built custom websites for other individuals or companies who wanted to open their own fligh agency business. The custom sites were based on our base site.
-    - Since it was a small team, I ws responsible for the design, backend and frontend development.
-    - We used vanilla php coupled with some libraries  from Zend framework.
+    - Since it was a small team, I was responsible for the design, backend and frontend development.
+    - We used vanilla php coupled with some libraries from Zend framework.
     - While there, I was the lead technical team leader, and along with my I.T., manager conducted several interviews to add more developers to the team, and have learned valuable communication skills through that.
 
 - company:
@@ -162,7 +166,7 @@ experiences:
     name: University of Manchester First Year Project
     # url: "https://www.gazprom-energy.co.uk"
     location: Manchester
-    overview: Manchester University First Uear project
+    overview: Manchester University First year project
   positions:
   - designation: PHP Web Developer
     start: 2010
@@ -171,6 +175,7 @@ experiences:
     - Using codeigniter php framework, we were tasked with building a sports website where sport teams can list their team details and let players apply to join the team.
     - We used jQuery along with css and the php framework to carry out the tasks.
     - Later, we had to demonstrate the project in fron of the other teams.
+    - We learned how to work independently as we had to do all the research without any prior knowledge.
     - I gained valuable project planning and team communication experiences while working on this project.
 
 
