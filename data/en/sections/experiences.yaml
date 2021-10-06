@@ -156,6 +156,7 @@ experiences:
   positions:
   - designation: PHP Web Developer
     start: 2011
+    end: 2011
     responsibilities:
     - I used this opportunity to Jumpstart my web development career.
     - It was the first time, I had to build a commercial website.
@@ -170,6 +171,7 @@ experiences:
   positions:
   - designation: PHP Web Developer
     start: 2010
+    end: 2011
     responsibilities:
     - I led a team of five in our University web project.
     - Using codeigniter php framework, we were tasked with building a sports website where sport teams can list their team details and let players apply to join the team.
