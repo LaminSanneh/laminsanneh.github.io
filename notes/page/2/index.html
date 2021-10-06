@@ -54,13 +54,30 @@ Lamin Sanneh</a>
 <i class="fas fa-plus-circle"></i><a href=/notes/vue.js/basic/>Basic</a>
 <ul>
 <li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
-<li><a href=/notes/vue.js/basic/binding/ title=Bindings>Bindings</a></li>
+<li><a href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li>
+<li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li>
+<li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li>
+<li><a href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li>
 </ul>
 </li>
 <li>
 <i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a>
 <ul>
 <li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
+<li><a href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li>
+<li><a href=/notes/vue.js/advanced/custom-events/ title="Custom Events">Custom Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/>Mongoose.js</a>
+<ul>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/basic/>Bacic</a>
+<ul>
+<li><a href=/notes/mongoose/basic/connection/ title="Mongoose Connection">Mongoose Connection</a></li>
+<li><a href=/notes/mongoose/basic/schema/ title="Mongoose Schema">Mongoose Schema</a></li>
 </ul>
 </li>
 </ul>
@@ -80,6 +97,31 @@ Lamin Sanneh</a>
 <section class=content-section id=content-section>
 <div class="content container-fluid" id=content>
 <div class="container-fluid note-card-holder" id=note-card-holder>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Variable</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>NAME<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;John&#34;</span>
+echo $NAME
+echo <span style=color:#e6db74>&#34;</span>$NAME<span style=color:#e6db74>&#34;</span>
+echo <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>NAME<span style=color:#e6db74>}</span><span style=color:#e6db74>
+</span></code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Condition</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> -z <span style=color:#e6db74>&#34;</span>$string<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+  echo <span style=color:#e6db74>&#34;String is empty&#34;</span>
+<span style=color:#66d9ef>elif</span> <span style=color:#f92672>[[</span> -n <span style=color:#e6db74>&#34;</span>$string<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+  echo <span style=color:#e6db74>&#34;String is not empty&#34;</span>
+<span style=color:#66d9ef>fi</span>
+</code></pre></div></div>
+</div>
+</div>
+</div>
 </div>
 <div class=paginator>
 <ul class="pagination pagination-default">
@@ -95,11 +137,14 @@ Lamin Sanneh</a>
 <li class="page-item active">
 <a href=# aria-current=page aria-label="Page 2" class=page-link role=button>2</a>
 </li>
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=Next class=page-link role=button tabindex=-1><span aria-hidden=true>&#187;</span></a>
+<li class=page-item>
+<a href=/notes/page/3/ aria-label="Page 3" class=page-link role=button>3</a>
 </li>
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=Last class=page-link role=button tabindex=-1><span aria-hidden=true>&#187;&#187;</span></a>
+<li class=page-item>
+<a href=/notes/page/3/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
+</li>
+<li class=page-item>
+<a href=/notes/page/3/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
 </li>
 </ul>
 </div>

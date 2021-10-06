@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Expressions</title>
+<title>Bootstrap</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
@@ -11,10 +11,10 @@
 <link rel=stylesheet href=/css/flag-icon.min.css>
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<meta property="og:title" content="Expressions">
-<meta property="og:description" content="Vuejs Expressions <div id=&#34;app&#34;> <p>I have a {{ product }}</p> <p>{{ product + 's' }}</p> <p>{{ isWorking ? 'YES' : 'NO' }}</p> <p>{{ product.getSalePrice() }}</p> </div>     ">
+<meta property="og:title" content="Bootstrap">
+<meta property="og:description" content="Vuejs Bootstrap import React from 'react'; import ReactDOM from 'react-dom'; import App from './App'; ReactDOM.render( <React.StrictMode> <App /> </React.StrictMode>, document.getElementById('root') );     ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/basic/expressions/"><meta property="article:section" content="notes">
+<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/basic/bootstrap/"><meta property="article:section" content="notes">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
 <link rel=stylesheet href=/css/layouts/notes.css>
 <link rel=stylesheet href=/css/navigators/sidebar.css>
@@ -53,11 +53,11 @@ Lamin Sanneh</a>
 <li>
 <i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/basic/>Basic</a>
 <ul class=active>
-<li><a class=active href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
+<li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
 <li><a href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li>
 <li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li>
 <li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li>
-<li><a href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li>
+<li><a class=active href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li>
 </ul>
 </li>
 <li>
@@ -99,14 +99,18 @@ Lamin Sanneh</a>
 <div class="container-fluid note-card-holder" id=note-card-holder>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Vuejs Expressions</span></h5>
+<h5 class=note-title><span>Vuejs Bootstrap</span></h5>
 <div class=card>
-<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;app&#34;</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;I have a {{ product }}&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;{{ product + &#39;s&#39; }}&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;{{ isWorking ? &#39;YES&#39; : &#39;NO&#39; }}&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;{{ product.getSalePrice() }}&lt;/<span style=color:#f92672>p</span>&gt;
-&lt;/<span style=color:#f92672>div</span>&gt;
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+import App from &#39;./App&#39;;
+
+ReactDOM.render(
+  &lt;<span style=color:#f92672>React.StrictMode</span>&gt;
+    &lt;<span style=color:#f92672>App</span> /&gt;
+  &lt;/<span style=color:#f92672>React.StrictMode</span>&gt;,
+  document.getElementById(&#39;root&#39;)
+);
 </code></pre></div></div>
 </div>
 </div>

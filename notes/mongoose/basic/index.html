@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Expressions</title>
+<title>Bacic</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
@@ -11,10 +11,10 @@
 <link rel=stylesheet href=/css/flag-icon.min.css>
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<meta property="og:title" content="Expressions">
-<meta property="og:description" content="Vuejs Expressions <div id=&#34;app&#34;> <p>I have a {{ product }}</p> <p>{{ product + 's' }}</p> <p>{{ isWorking ? 'YES' : 'NO' }}</p> <p>{{ product.getSalePrice() }}</p> </div>     ">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/basic/expressions/"><meta property="article:section" content="notes">
+<meta property="og:title" content="Bacic">
+<meta property="og:description" content>
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://laminsanneh.com/notes/mongoose/basic/">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
 <link rel=stylesheet href=/css/layouts/notes.css>
 <link rel=stylesheet href=/css/navigators/sidebar.css>
@@ -48,12 +48,12 @@ Lamin Sanneh</a>
 <li id=list-heading><a href=/notes data-filter=all>Notes</a></li>
 <div class=subtree>
 <li>
-<i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/>Vue.js</a>
-<ul class=active>
+<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/>Vue.js</a>
+<ul>
 <li>
-<i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/basic/>Basic</a>
-<ul class=active>
-<li><a class=active href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
+<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/basic/>Basic</a>
+<ul>
+<li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
 <li><a href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li>
 <li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li>
 <li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li>
@@ -71,11 +71,11 @@ Lamin Sanneh</a>
 </ul>
 </li>
 <li>
-<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/>Mongoose.js</a>
-<ul>
+<i class="fas fa-minus-circle"></i><a class=active href=/notes/mongoose/>Mongoose.js</a>
+<ul class=active>
 <li>
-<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/basic/>Bacic</a>
-<ul>
+<i class="fas fa-minus-circle"></i><a class=active href=/notes/mongoose/basic/>Bacic</a>
+<ul class=active>
 <li><a href=/notes/mongoose/basic/connection/ title="Mongoose Connection">Mongoose Connection</a></li>
 <li><a href=/notes/mongoose/basic/schema/ title="Mongoose Schema">Mongoose Schema</a></li>
 </ul>
@@ -99,18 +99,45 @@ Lamin Sanneh</a>
 <div class="container-fluid note-card-holder" id=note-card-holder>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Vuejs Expressions</span></h5>
+<h5 class=note-title><span>Connect to Mongoose Database</span></h5>
 <div class=card>
-<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;app&#34;</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;I have a {{ product }}&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;{{ product + &#39;s&#39; }}&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;{{ isWorking ? &#39;YES&#39; : &#39;NO&#39; }}&lt;/<span style=color:#f92672>p</span>&gt;
-  &lt;<span style=color:#f92672>p</span>&gt;{{ product.getSalePrice() }}&lt;/<span style=color:#f92672>p</span>&gt;
-&lt;/<span style=color:#f92672>div</span>&gt;
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>mongoose</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;mongoose&#39;</span>);
+
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>db</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mongoose</span>.<span style=color:#a6e22e>connection</span>;
+
+<span style=color:#a6e22e>mongoose</span>.<span style=color:#a6e22e>connect</span>(<span style=color:#e6db74>&#34;mongodb://localhost:27017/appname&#34;</span>);
+
+<span style=color:#a6e22e>db</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;open&#39;</span>, () =&gt; {
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Connected to mongoDB&#39;</span>);
+});
+
+<span style=color:#a6e22e>db</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;error&#39;</span>, (<span style=color:#a6e22e>error</span>) =&gt; {
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>error</span>);
+});
 </code></pre></div></div>
 </div>
 </div>
 </div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Mongoose Schema</span></h5>
+<div class=card>
+<div class=card-body><p>Basic Schema</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>mongoose</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;mongoose&#39;</span>);
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Schema</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mongoose</span>.<span style=color:#a6e22e>Schema</span>;
+
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>userSchema</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Schema</span>({
+    <span style=color:#a6e22e>name</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> String, <span style=color:#a6e22e>required</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>, <span style=color:#a6e22e>max</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>100</span> },
+    <span style=color:#a6e22e>email</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> String, <span style=color:#a6e22e>required</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span>, <span style=color:#a6e22e>max</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>100</span>, <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>null</span> },
+});
+
+<span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mongoose</span>.<span style=color:#a6e22e>model</span>(<span style=color:#e6db74>&#39;user&#39;</span>, <span style=color:#a6e22e>userSchema</span>);
+</code></pre></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class=paginator>
 </div>
 </div>
 </section>

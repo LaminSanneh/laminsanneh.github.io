@@ -54,13 +54,30 @@ Lamin Sanneh</a>
 <i class="fas fa-plus-circle"></i><a href=/notes/vue.js/basic/>Basic</a>
 <ul>
 <li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
-<li><a href=/notes/vue.js/basic/binding/ title=Bindings>Bindings</a></li>
+<li><a href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li>
+<li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li>
+<li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li>
+<li><a href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li>
 </ul>
 </li>
 <li>
 <i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a>
 <ul>
 <li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
+<li><a href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li>
+<li><a href=/notes/vue.js/advanced/custom-events/ title="Custom Events">Custom Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/>Mongoose.js</a>
+<ul>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/basic/>Bacic</a>
+<ul>
+<li><a href=/notes/mongoose/basic/connection/ title="Mongoose Connection">Mongoose Connection</a></li>
+<li><a href=/notes/mongoose/basic/schema/ title="Mongoose Schema">Mongoose Schema</a></li>
 </ul>
 </li>
 </ul>
@@ -82,7 +99,7 @@ Lamin Sanneh</a>
 <div class="container-fluid note-card-holder" id=note-card-holder>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Expressions</span></h5>
+<h5 class=note-title><span>Vuejs Expressions</span></h5>
 <div class=card>
 <div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;app&#34;</span>&gt;
   &lt;<span style=color:#f92672>p</span>&gt;I have a {{ product }}&lt;/<span style=color:#f92672>p</span>&gt;
@@ -96,19 +113,21 @@ Lamin Sanneh</a>
 </div>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Binding</span></h5>
+<h5 class=note-title><span>Vuejs Binding</span></h5>
 <div class=card>
-<div class=card-body><p>Fullhand</p>
+<div class=card-body><p>Fullhand attribute binding</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>v-bind:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
 </code></pre></div><p>Shorthand</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
+</code></pre></div><p>Two way data binding</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>v-model</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;firstName&#34;</span>&gt;
 </code></pre></div></div>
 </div>
 </div>
 </div>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Binding2</span></h5>
+<h5 class=note-title><span>Vuejs Binding2</span></h5>
 <div class=card>
 <div class=card-body><p>True or false will add or remove attribute:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>:disabled</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;isButtonDisabled”</span>&gt;...
@@ -122,7 +141,125 @@ Lamin Sanneh</a>
 </div>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Lifecycle Hooks</span></h5>
+<h5 class=note-title><span>Vuejs Binding3</span></h5>
+<div class=card>
+<div class=card-body><p>Toggles the display: none CSS property:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>p</span> <span style=color:#a6e22e>v-show</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;showProductDetails&#34;</span>&gt;
+  ...
+&lt;/<span style=color:#f92672>p</span>&gt;
+</code></pre></div><p>Passing arguments to a computed binding:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>template</span>&gt;
+  &lt;<span style=color:#f92672>ProductComponent</span> <span style=color:#a6e22e>:cost</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;product_type(&#39;product_2&#39;)&#34;</span>&gt;&lt;/<span style=color:#f92672>ProductComponent</span>&gt;
+&lt;/<span style=color:#f92672>template</span>&gt;
+
+&lt;<span style=color:#f92672>script</span>&gt;
+  <span style=color:#66d9ef>import</span> <span style=color:#a6e22e>ProductComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#f92672>/</span><span style=color:#a6e22e>components</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ProductComponent</span>
+  
+  <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> {
+    <span style=color:#a6e22e>components</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>ProductComponent</span> },
+    <span style=color:#a6e22e>data</span>() {
+      <span style=color:#66d9ef>return</span> {
+        <span style=color:#a6e22e>products</span><span style=color:#f92672>:</span> {
+          <span style=color:#a6e22e>product_1</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;100&#39;</span>,
+          <span style=color:#a6e22e>product_2</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;200&#39;</span>,
+          <span style=color:#a6e22e>product_3</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;300&#39;</span>
+        }
+      }
+    },
+    <span style=color:#a6e22e>computed</span><span style=color:#f92672>:</span> {
+      <span style=color:#a6e22e>product_type</span>() {
+        <span style=color:#75715e>// Argument passed to arrow function, NOT computed function declaration.
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> (<span style=color:#a6e22e>product_id</span>) =&gt; { <span style=color:#75715e>// Arrow function to allow &#39;this&#39; instance to be accessible.
+</span><span style=color:#75715e></span>          <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>products</span>[<span style=color:#a6e22e>product_id</span>]  <span style=color:#75715e>// Square bracket notation for &#39;any&#39; type variable
+</span><span style=color:#75715e></span>        }
+      }
+    }
+  }
+&lt;/<span style=color:#f92672>script</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs List Rendering</span></h5>
+<div class=card>
+<div class=card-body><p>Basic array loop</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>li</span> <span style=color:#a6e22e>v-for</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;item in items&#34;</span> <span style=color:#a6e22e>:key</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;item.id&#34;</span>&gt;
+  {{ item }}
+&lt;/<span style=color:#f92672>li</span>&gt;
+</code></pre></div><p>Loop with access to index</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>li</span> <span style=color:#a6e22e>v-for</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;(item, index) in items&#34;</span>&gt;...&lt;/<span style=color:#f92672>li</span>&gt;
+</code></pre></div><p>Baisc object loop</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>li</span> <span style=color:#a6e22e>v-for</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;value in object&#34;</span>&gt;...&lt;/<span style=color:#f92672>li</span>&gt;
+&lt;<span style=color:#f92672>li</span> <span style=color:#a6e22e>v-for</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;(value, index) in object&#34;</span>&gt;...&lt;/<span style=color:#f92672>li</span>&gt;
+&lt;<span style=color:#f92672>li</span> <span style=color:#a6e22e>v-for</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;(value, name, index) in object&#34;</span>&gt;...&lt;/<span style=color:#f92672>li</span>&gt;
+</code></pre></div><p>Loop using component instead of html native element e.g. div, li</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>cart-product</span> <span style=color:#a6e22e>v-for</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;item in products&#34;</span> <span style=color:#a6e22e>:product</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;item&#34;</span> <span style=color:#a6e22e>:key</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;item.id&#34;</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs Actions/Events</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>v-on:click</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;addToCart&#34;</span>&gt;...&lt;/<span style=color:#f92672>button</span>&gt; // Fullhand
+&lt;<span style=color:#f92672>button</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>click</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;addToCart&#34;</span>&gt;...&lt;/<span style=color:#f92672>button</span>&gt; // Shorthand
+</code></pre></div><p>Arguments can be passed:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>click</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;addToCart(product)&#34;</span>&gt;...&lt;/<span style=color:#f92672>button</span>&gt;
+</code></pre></div><p>To prevent default behaviour (e.g. page reload):</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>form</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>submit</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>prevent</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;addProduct&#34;</span>&gt;...&lt;/<span style=color:#f92672>form</span>&gt;
+</code></pre></div><p>Only trigger once:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>img</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>mouseover</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>once</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;showImage&#34;</span>&gt;
+.stop // Stop all event propagation
+.self // Only trigger if event.target is element itself
+</code></pre></div><p>Keyboard entry example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>input</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>keyup</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>enter</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;submit&#34;</span>&gt;
+</code></pre></div><p>Call onCopy when control-c is pressed:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>input</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#a6e22e>keyup</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>ctrl</span><span style=color:#960050;background-color:#1e0010>.</span><span style=color:#a6e22e>c</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;onCopy&#34;</span>&gt;
+</code></pre></div><p>Key modifiers:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>.<span style=color:#a6e22e>tab</span>
+.<span style=color:#66d9ef>delete</span>
+.<span style=color:#a6e22e>esc</span>
+.<span style=color:#a6e22e>space</span>
+.<span style=color:#a6e22e>up</span>
+.<span style=color:#a6e22e>down</span>
+.<span style=color:#a6e22e>left</span>
+.<span style=color:#a6e22e>right</span>
+.<span style=color:#a6e22e>ctrl</span>
+.<span style=color:#a6e22e>alt</span>
+.<span style=color:#a6e22e>shift</span>
+.<span style=color:#a6e22e>meta</span>
+</code></pre></div><p>Mouse modifiers:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>.<span style=color:#a6e22e>left</span>
+.<span style=color:#a6e22e>right</span>
+.<span style=color:#a6e22e>middle</span>
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs Bootstrap</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+import App from &#39;./App&#39;;
+
+ReactDOM.render(
+  &lt;<span style=color:#f92672>React.StrictMode</span>&gt;
+    &lt;<span style=color:#f92672>App</span> /&gt;
+  &lt;/<span style=color:#f92672>React.StrictMode</span>&gt;,
+  document.getElementById(&#39;root&#39;)
+);
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs Lifecycle Hooks</span></h5>
 <div class=card>
 <div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>beforeCreate</span>
 <span style=color:#a6e22e>created</span>
@@ -132,6 +269,73 @@ Lamin Sanneh</a>
 <span style=color:#a6e22e>updated</span>
 <span style=color:#a6e22e>beforeDestroy</span>
 <span style=color:#a6e22e>destroyed</span>
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs Component Anatomy</span></h5>
+<div class=card>
+<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>template</span>&gt;
+  &lt;<span style=color:#f92672>span</span>&gt;{{ message }}&lt;/<span style=color:#f92672>span</span>&gt;
+&lt;/<span style=color:#f92672>template</span>&gt;
+
+&lt;<span style=color:#f92672>script</span>&gt;
+  <span style=color:#66d9ef>import</span> <span style=color:#a6e22e>ProductComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;@/components/ProductComponent&#39;</span>
+  <span style=color:#66d9ef>import</span> <span style=color:#a6e22e>ReviewComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;@/components/ReviewComponent&#39;</span>
+  
+  <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> {
+    <span style=color:#a6e22e>components</span><span style=color:#f92672>:</span> { <span style=color:#75715e>// Components that can be used in the template
+</span><span style=color:#75715e></span>      <span style=color:#a6e22e>ProductComponent</span>,
+      <span style=color:#a6e22e>ReviewComponent</span>
+    },
+    <span style=color:#a6e22e>props</span><span style=color:#f92672>:</span> { <span style=color:#75715e>// The parameters the component accepts
+</span><span style=color:#75715e></span>      <span style=color:#a6e22e>message</span><span style=color:#f92672>:</span> String,
+      <span style=color:#a6e22e>product</span><span style=color:#f92672>:</span> Object,
+      <span style=color:#a6e22e>email</span><span style=color:#f92672>:</span> {
+        <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> String,
+        <span style=color:#a6e22e>required</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+        <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;none&#39;</span>,
+        <span style=color:#a6e22e>validator</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>value</span>) {
+          <span style=color:#75715e>// Should return true if value is valid
+</span><span style=color:#75715e></span>        }
+      }
+    },
+    <span style=color:#a6e22e>data</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> () { <span style=color:#75715e>// Must be a function
+</span><span style=color:#75715e></span>      <span style=color:#66d9ef>return</span> {
+        <span style=color:#a6e22e>firstName</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Vue&#39;</span>,
+        <span style=color:#a6e22e>lastName</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Mastery&#39;</span>
+      }
+    },
+    <span style=color:#a6e22e>computed</span><span style=color:#f92672>:</span> { <span style=color:#75715e>// Return cached values until dependencies change
+</span><span style=color:#75715e></span>      <span style=color:#a6e22e>fullName</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> () {
+        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstName</span><span style=color:#e6db74>}</span><span style=color:#e6db74> </span><span style=color:#e6db74>${</span><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastName</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>
+      }
+    },
+    <span style=color:#a6e22e>watch</span><span style=color:#f92672>:</span> { <span style=color:#75715e>// Called when firstName changes value
+</span><span style=color:#75715e></span>      <span style=color:#a6e22e>firstName</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>value</span>, <span style=color:#a6e22e>oldValue</span>) { <span style=color:#75715e>/* ... */</span> }
+    },
+    <span style=color:#a6e22e>methods</span><span style=color:#f92672>:</span> { <span style=color:#75715e>/* ... */</span> }
+  }
+&lt;/<span style=color:#f92672>script</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs Custom Events</span></h5>
+<div class=card>
+<div class=card-body><p>Use props to pass data into child components, custom events to pass data to parent elements.
+Set listener on component, within its parent:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button-counter</span> <span style=color:#a6e22e>v-on:incrementBy</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;incWithVal&#34;</span>&gt;...&lt;/<span style=color:#f92672>button-counter</span>&gt;
+</code></pre></div><p>Inside parent component:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>methods</span><span style=color:#f92672>:</span> {
+  <span style=color:#a6e22e>incWithVal</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>toAdd</span>) { ... }
+}
+</code></pre></div><p>Inside button-counter template:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>$emit</span>(<span style=color:#e6db74>&#39;incrementyBy&#39;</span>, <span style=color:#ae81ff>5</span>)
 </code></pre></div></div>
 </div>
 </div>

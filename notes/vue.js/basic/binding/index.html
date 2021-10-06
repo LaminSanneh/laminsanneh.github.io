@@ -12,12 +12,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
 <meta property="og:title" content="Binding">
-<meta property="og:description" content="Binding Fullhand
+<meta property="og:description" content="Vuejs Binding Fullhand attribute binding
 <a v-bind:href=&#34;url&#34;>...</a> Shorthand
-<a :href=&#34;url&#34;>...</a>     Binding2 True or false will add or remove attribute:
+<a :href=&#34;url&#34;>...</a> Two way data binding
+<input v-model=&#34;firstName&#34;>     Vuejs Binding2 True or false will add or remove attribute:
 <button :disabled=&#34;isButtonDisabled”>... If isActive is truthy, the class ‘active’ will appear:
 <div :class=&#34;{ active: isActive }&#34;>... Style color set to value of activeColor:
-<div :style=&#34;{ color: activeColor }&#34;>     ">
+<div :style=&#34;{ color: activeColor }&#34;>     Vuejs Binding3 Toggles the display: none CSS property:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://laminsanneh.com/notes/vue.js/basic/binding/"><meta property="article:section" content="notes">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
@@ -59,13 +60,30 @@ Lamin Sanneh</a>
 <i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/basic/>Basic</a>
 <ul class=active>
 <li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
-<li><a class=active href=/notes/vue.js/basic/binding/ title=Bindings>Bindings</a></li>
+<li><a class=active href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li>
+<li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li>
+<li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li>
+<li><a href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li>
 </ul>
 </li>
 <li>
 <i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a>
 <ul>
 <li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
+<li><a href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li>
+<li><a href=/notes/vue.js/advanced/custom-events/ title="Custom Events">Custom Events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/>Mongoose.js</a>
+<ul>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/basic/>Bacic</a>
+<ul>
+<li><a href=/notes/mongoose/basic/connection/ title="Mongoose Connection">Mongoose Connection</a></li>
+<li><a href=/notes/mongoose/basic/schema/ title="Mongoose Schema">Mongoose Schema</a></li>
 </ul>
 </li>
 </ul>
@@ -87,19 +105,21 @@ Lamin Sanneh</a>
 <div class="container-fluid note-card-holder" id=note-card-holder>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Binding</span></h5>
+<h5 class=note-title><span>Vuejs Binding</span></h5>
 <div class=card>
-<div class=card-body><p>Fullhand</p>
+<div class=card-body><p>Fullhand attribute binding</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>v-bind:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
 </code></pre></div><p>Shorthand</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
+</code></pre></div><p>Two way data binding</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>v-model</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;firstName&#34;</span>&gt;
 </code></pre></div></div>
 </div>
 </div>
 </div>
 <div class=note-card>
 <div class=item>
-<h5 class=note-title><span>Binding2</span></h5>
+<h5 class=note-title><span>Vuejs Binding2</span></h5>
 <div class=card>
 <div class=card-body><p>True or false will add or remove attribute:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>:disabled</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;isButtonDisabled”</span>&gt;...
@@ -107,6 +127,47 @@ Lamin Sanneh</a>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ active: isActive }&#34;</span>&gt;...
 </code></pre></div><p>Style color set to value of activeColor:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ color: activeColor }&#34;</span>&gt;
+</code></pre></div></div>
+</div>
+</div>
+</div>
+<div class=note-card>
+<div class=item>
+<h5 class=note-title><span>Vuejs Binding3</span></h5>
+<div class=card>
+<div class=card-body><p>Toggles the display: none CSS property:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>p</span> <span style=color:#a6e22e>v-show</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;showProductDetails&#34;</span>&gt;
+  ...
+&lt;/<span style=color:#f92672>p</span>&gt;
+</code></pre></div><p>Passing arguments to a computed binding:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>template</span>&gt;
+  &lt;<span style=color:#f92672>ProductComponent</span> <span style=color:#a6e22e>:cost</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;product_type(&#39;product_2&#39;)&#34;</span>&gt;&lt;/<span style=color:#f92672>ProductComponent</span>&gt;
+&lt;/<span style=color:#f92672>template</span>&gt;
+
+&lt;<span style=color:#f92672>script</span>&gt;
+  <span style=color:#66d9ef>import</span> <span style=color:#a6e22e>ProductComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#f92672>/</span><span style=color:#a6e22e>components</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ProductComponent</span>
+  
+  <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> {
+    <span style=color:#a6e22e>components</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>ProductComponent</span> },
+    <span style=color:#a6e22e>data</span>() {
+      <span style=color:#66d9ef>return</span> {
+        <span style=color:#a6e22e>products</span><span style=color:#f92672>:</span> {
+          <span style=color:#a6e22e>product_1</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;100&#39;</span>,
+          <span style=color:#a6e22e>product_2</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;200&#39;</span>,
+          <span style=color:#a6e22e>product_3</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;300&#39;</span>
+        }
+      }
+    },
+    <span style=color:#a6e22e>computed</span><span style=color:#f92672>:</span> {
+      <span style=color:#a6e22e>product_type</span>() {
+        <span style=color:#75715e>// Argument passed to arrow function, NOT computed function declaration.
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> (<span style=color:#a6e22e>product_id</span>) =&gt; { <span style=color:#75715e>// Arrow function to allow &#39;this&#39; instance to be accessible.
+</span><span style=color:#75715e></span>          <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>products</span>[<span style=color:#a6e22e>product_id</span>]  <span style=color:#75715e>// Square bracket notation for &#39;any&#39; type variable
+</span><span style=color:#75715e></span>        }
+      }
+    }
+  }
+&lt;/<span style=color:#f92672>script</span>&gt;
 </code></pre></div></div>
 </div>
 </div>

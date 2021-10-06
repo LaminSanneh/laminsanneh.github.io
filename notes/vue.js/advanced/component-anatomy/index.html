@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Advanced</title>
+<title>Component Anatomy</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
@@ -11,10 +11,10 @@
 <link rel=stylesheet href=/css/flag-icon.min.css>
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<meta property="og:title" content="Advanced">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/advanced/">
+<meta property="og:title" content="Component Anatomy">
+<meta property="og:description" content="Vuejs Component Anatomy <template> <span>{{ message }}</span> </template> <script> import ProductComponent from '@/components/ProductComponent' import ReviewComponent from '@/components/ReviewComponent' export default { components: { // Components that can be used in the template  ProductComponent, ReviewComponent }, props: { // The parameters the component accepts  message: String, product: Object, email: { type: String, required: true, default: 'none', validator: function (value) { // Should return true if value is valid  } } }, data: function () { // Must be a function  return { firstName: 'Vue', lastName: 'Mastery' } }, computed: { // Return cached values until dependencies change  fullName: function () { return `${this.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/advanced/component-anatomy/"><meta property="article:section" content="notes">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
 <link rel=stylesheet href=/css/layouts/notes.css>
 <link rel=stylesheet href=/css/navigators/sidebar.css>
@@ -64,7 +64,7 @@ Lamin Sanneh</a>
 <i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/advanced/>Advanced</a>
 <ul class=active>
 <li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
-<li><a href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li>
+<li><a class=active href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li>
 <li><a href=/notes/vue.js/advanced/custom-events/ title="Custom Events">Custom Events</a></li>
 </ul>
 </li>
@@ -97,22 +97,6 @@ Lamin Sanneh</a>
 <section class=content-section id=content-section>
 <div class="content container-fluid" id=content>
 <div class="container-fluid note-card-holder" id=note-card-holder>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Vuejs Lifecycle Hooks</span></h5>
-<div class=card>
-<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>beforeCreate</span>
-<span style=color:#a6e22e>created</span>
-<span style=color:#a6e22e>beforeMount</span>
-<span style=color:#a6e22e>mounted</span>
-<span style=color:#a6e22e>beforeUpdate</span>
-<span style=color:#a6e22e>updated</span>
-<span style=color:#a6e22e>beforeDestroy</span>
-<span style=color:#a6e22e>destroyed</span>
-</code></pre></div></div>
-</div>
-</div>
-</div>
 <div class=note-card>
 <div class=item>
 <h5 class=note-title><span>Vuejs Component Anatomy</span></h5>
@@ -163,25 +147,6 @@ Lamin Sanneh</a>
 </div>
 </div>
 </div>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Vuejs Custom Events</span></h5>
-<div class=card>
-<div class=card-body><p>Use props to pass data into child components, custom events to pass data to parent elements.
-Set listener on component, within its parent:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button-counter</span> <span style=color:#a6e22e>v-on:incrementBy</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;incWithVal&#34;</span>&gt;...&lt;/<span style=color:#f92672>button-counter</span>&gt;
-</code></pre></div><p>Inside parent component:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>methods</span><span style=color:#f92672>:</span> {
-  <span style=color:#a6e22e>incWithVal</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>toAdd</span>) { ... }
-}
-</code></pre></div><p>Inside button-counter template:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>$emit</span>(<span style=color:#e6db74>&#39;incrementyBy&#39;</span>, <span style=color:#ae81ff>5</span>)
-</code></pre></div></div>
-</div>
-</div>
-</div>
-</div>
-<div class=paginator>
 </div>
 </div>
 </section>
