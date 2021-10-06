@@ -9,7 +9,7 @@ menu:
     weight: 10
 ---
 
-{{< note title="Expressions">}}
+{{< note title="Vuejs Expressions">}}
 ```html
 <div id="app">
   <p>I have a {{ product }}</p>

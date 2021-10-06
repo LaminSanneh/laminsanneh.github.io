@@ -90,17 +90,88 @@ experiences:
     - I also did my dissertation by using Ember.js and Laravel as this work period conincided with my final year in University.
     - I also used some of the time to build my yputube channel with more tutorials.
 
-# - company:
-#     name: RnR Innovations
-#     # url: "https://www.example.com"
-#     location: London
-#     overview: A music company in the same category of the likes of spotify, deezer.
-#   positions:
-#   - designation: Web Developer - Frontend concept developer (Internship)
-#     start: May 2013
-#     end: July 2014
-#     responsibilities:
-#     - Worked as a freelance working on several small projects ranging from wordpress development, single page app development using Ember.js, and Php framework called Octobercms.
-#     - I built an event planner app for a team in Australia, remotely, using Ember.js, my favorite framework during this time.
-#     - I also did my dissertation by using Ember.js and Laravel as this work period conincided with my final year in University.
-#     - I also used some of the time to build my yputube channel with more tutorials.
+- company:
+    name: R&R Music Ltd
+    # url: "https://www.example.com"
+    location: London
+    overview: A music company in the same category of the likes of spotify, deezer.
+  positions:
+  - designation: Web Developer - Frontend concept developer (Internship)
+    start: May 2013
+    end: July 2013
+    responsibilities:
+    - Worked with the said music company above. While there, I had to create frontend prototypes using jQuery, Ember.js, vanilla Js, SASS CSS and HTML.
+    - This was so that we could give concept overview to our investors and partners before the final products are to be developed.
+    - I collaborated with the team in Kiev(Ukraine), as the company was based in London but had other international headquarters in USA, Spain and Ukraine
+    - I also had to collaborate with graphic designers, UX designers who were from different parts of Europe in-house to create prototypes.
+    - This was around teh time when responsive design was a big buzzword and I was invited to give a presentation on it to the rest of the company by my manager, which was a valuable experience to me as I had to explain the concept to non-programmers as well.
+
+- company:
+    name: Gazprom Energy
+    url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: A russian company, with subsidiaries in Uk, specializing in selling energy(gas and electricity).
+  positions:
+  - designation: ASP.Net/C# Software Developer
+    start: 2012
+    end: 2013
+    responsibilities:
+    - I worked here using microsoft technologies like MS SQL server, Visual Studio, entity framework.
+    - I was in charge of several applications, one of which is a reporting application, used by several departments.
+    - The app was built using WPF(Windows Presentation FOundation), and was quite complex with several micro services all bundled in a monolithic package, each communicating with each other using C# interfaces.
+    - Sometimes, before a feature was completed, I had to write some complex SQL to export the report in excel format so the in-house client can carry out their task.
+    - The application features went through several stages of development, alpha and testing before being released to the end user.
+    - I gained valuable experience using C# which I self-learned. Using entity framework was really fun and it opened a whole new world of experience when it came to software development and interfacing with the database.
+    - I also enjoyed using linq technology from microsoft.
+
+- company:
+    name: Travel Indigo(Part time)
+    # url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: An international Group Travel and hotel booking agency.
+  positions:
+  - designation: PHP Web Developer
+    start: 2011
+    end: 2012
+    responsibilities:
+    - While at University, I worked parttime for a travel agency called Travel Indigo, which specializes in group travel internationally and hotel bookings.
+    - I and another webdeveloper were responsible for building the initial version of the travel website.
+    - We had to tap into several apis, primarily travelport, which at that stage only supported xml results(now I believe they do json).
+    - The xml is parsed using php libraries(Zend framework) and stored in a more manageable format in our database.
+    - We had to setup a system which caches the results which the user searches so we donot hit the api again.
+    - We also built custom websites for other individuals or companies who wanted to open their own fligh agency business. The custom sites were based on our base site.
+    - Since it was a small team, I ws responsible for the design, backend and frontend development.
+    - We used vanilla php coupled with some libraries  from Zend framework.
+    - While there, I was the lead technical team leader, and along with my I.T., manager conducted several interviews to add more developers to the team, and have learned valuable communication skills through that.
+
+- company:
+    name: Manchester Notebook
+    # url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: A Manchester university group which provides a platform where several of University societies can connect, recruit and communicate with their members and potential members.
+  positions:
+  - designation: PHP Web Developer
+    start: 2011
+    responsibilities:
+    - I used this opportunity to Jumpstart my web development career.
+    - It was the first time, I had to build a commercial website.
+    - Using vanilla PHP (dreamweaver), Mysql, HTML and CSS.
+    - I gained valuable communication skills, having to have regular meeting with the owners to give status feedback and plan the next stage of development.
+
+- company:
+    name: University of Manchester First Year Project
+    # url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: Manchester University First Uear project
+  positions:
+  - designation: PHP Web Developer
+    start: 2010
+    responsibilities:
+    - I led a team of five in our University web project.
+    - Using codeigniter php framework, we were tasked with building a sports website where sport teams can list their team details and let players apply to join the team.
+    - We used jQuery along with css and the php framework to carry out the tasks.
+    - Later, we had to demonstrate the project in fron of the other teams.
+    - I gained valuable project planning and team communication experiences while working on this project.
+
+
+

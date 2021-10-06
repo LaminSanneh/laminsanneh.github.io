@@ -1,6 +1,6 @@
 ---
 title: Lifecycle Hooks
-weight: 40
+weight: 60
 menu:
   notes:
     name: Lifecycle Hooks
@@ -9,7 +9,7 @@ menu:
     weight: 10
 ---
 
-{{< note title="Lifecycle Hooks">}}
+{{< note title="Vuejs Lifecycle Hooks">}}
   
 ```js
 beforeCreate
@@ -21,3 +21,4 @@ updated
 beforeDestroy
 destroyed
 ```
+{{< /note >}}
