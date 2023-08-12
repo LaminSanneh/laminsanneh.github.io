@@ -6,10 +6,31 @@ section:
   weight: 3
   showOnNavbar: true
   # Can optionally hide the title in sections
-  # hideTitle: true 
+  # hideTitle: true
 
 # Your experiences
 experiences:
+- company:
+    name: SOCi
+    url: "https://www.meetsoci.com/"
+    location: San Diego, United States
+    # company overview
+    overview: A social media marketting company based in California, San Diego.
+  positions:
+  - designation: Fullstack Developer
+    start: November 2021
+    end: July 2023
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Worked with a vast range of technologies ranging from GraphQl, highly customized drag and drop Javascript widgets, Grafana, Elastic Search, Php, Backbone.js.
+    - The team setup there was using Mob Programming
+    - The team there were extremely skilled, so I learnt a lot
+    - We used Docker for our develpment environment
+    - Jenkins, along with Github and Docker to test, deploy and run the production application
+    - There were several repos ranging in technologies from Laravel, Backbone.js, GraphQL e.t.c
+    - Testing was heavily emphasized, whether unit tests in PHPUnit, Integration tests using cypress, to manual testing
+    - We used Figma when collaborating with designers and Product Managers to communicate UI changes
+
 - company:
     name: Yaraku
     url: "https://www.yaraku.com"
