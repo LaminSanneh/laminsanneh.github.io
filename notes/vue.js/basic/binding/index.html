@@ -1,222 +1,54 @@
-<!doctype html><html>
-<head>
-<title>Binding</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/layouts/main.css>
-<link rel=stylesheet href=/css/navigators/navbar.css>
-<link rel=stylesheet href=/css/plyr.css>
-<link rel=stylesheet href=/css/flag-icon.min.css>
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<meta property="og:title" content="Binding">
-<meta property="og:description" content="Vuejs Binding Fullhand attribute binding
+<!doctype html><html><head><title>Binding</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><meta property="og:title" content="Binding"><meta property="og:description" content="Vuejs Binding Fullhand attribute binding
 <a v-bind:href=&#34;url&#34;>...</a> Shorthand
 <a :href=&#34;url&#34;>...</a> Two way data binding
-<input v-model=&#34;firstName&#34;>     Vuejs Binding2 True or false will add or remove attribute:
+<input v-model=&#34;firstName&#34;> Vuejs Binding2 True or false will add or remove attribute:
 <button :disabled=&#34;isButtonDisabled”>... If isActive is truthy, the class ‘active’ will appear:
 <div :class=&#34;{ active: isActive }&#34;>... Style color set to value of activeColor:
-<div :style=&#34;{ color: activeColor }&#34;>     Vuejs Binding3 Toggles the display: none CSS property:">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://laminsanneh.com/notes/vue.js/basic/binding/"><meta property="article:section" content="notes">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
-<link rel=stylesheet href=/css/layouts/notes.css>
-<link rel=stylesheet href=/css/navigators/sidebar.css>
-</head>
-<body data-spy=scroll data-target=#TableOfContents data-offset=80>
-<div class="container-fluid bg-dimmed wrapper">
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
-<div class=container>
-<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span>
-</button>
-<a class=navbar-brand href=/>
-Lamin Sanneh</a>
+<div :style=&#34;{ color: activeColor }&#34;> Vuejs Binding3 Toggles the display: none CSS property:
+<p v-show=&#34;showProductDetails&#34;> ... </p> Passing arguments to a computed binding:"><meta property="og:type" content="article"><meta property="og:url" content="http://laminsanneh.com/notes/vue.js/basic/binding/"><meta property="article:section" content="notes"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/>Lamin Sanneh</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span>
-</button>
-<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
-<ul class="navbar-nav ml-auto">
-</ul>
-</div>
-</div>
-</nav>
-<section class=sidebar-section id=sidebar-section>
-<div class=sidebar-holder>
-<div class=sidebar id=sidebar>
-<form class=mx-auto method=get action=/search>
-<input type=text name=keyword placeholder=Search data-search id=search-box>
-</form>
-<div class=sidebar-tree>
-<ul class=tree id=tree>
-<li id=list-heading><a href=/notes data-filter=all>Notes</a></li>
-<div class=subtree>
-<li>
-<i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/>Vue.js</a>
-<ul class=active>
-<li>
-<i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/basic/>Basic</a>
-<ul class=active>
-<li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li>
-<li><a class=active href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li>
-<li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li>
-<li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li>
-<li><a href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li>
-</ul>
-</li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a>
-<ul>
-<li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li>
-<li><a href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li>
-<li><a href=/notes/vue.js/advanced/custom-events/ title="Custom Events">Custom Events</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/>Mongoose.js</a>
-<ul>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/notes/mongoose/basic/>Bacic</a>
-<ul>
-<li><a href=/notes/mongoose/basic/connection/ title="Mongoose Connection">Mongoose Connection</a></li>
-<li><a href=/notes/mongoose/basic/schema/ title="Mongoose Schema">Mongoose Schema</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/notes/bash/>Bash</a>
-<ul>
-<li><a href=/notes/bash/basic/ title=Variables>Variables</a></li>
-</ul>
-</li>
-</div>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class=content-section id=content-section>
-<div class="content container-fluid" id=content>
-<div class="container-fluid note-card-holder" id=note-card-holder>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Vuejs Binding</span></h5>
-<div class=card>
-<div class=card-body><p>Fullhand attribute binding</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>v-bind:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
-</code></pre></div><p>Shorthand</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
-</code></pre></div><p>Two way data binding</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>v-model</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;firstName&#34;</span>&gt;
-</code></pre></div></div>
-</div>
-</div>
-</div>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Vuejs Binding2</span></h5>
-<div class=card>
-<div class=card-body><p>True or false will add or remove attribute:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>:disabled</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;isButtonDisabled”</span>&gt;...
-</code></pre></div><p>If isActive is truthy, the class ‘active’ will appear:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ active: isActive }&#34;</span>&gt;...
-</code></pre></div><p>Style color set to value of activeColor:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ color: activeColor }&#34;</span>&gt;
-</code></pre></div></div>
-</div>
-</div>
-</div>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Vuejs Binding3</span></h5>
-<div class=card>
-<div class=card-body><p>Toggles the display: none CSS property:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>p</span> <span style=color:#a6e22e>v-show</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;showProductDetails&#34;</span>&gt;
-  ...
-&lt;/<span style=color:#f92672>p</span>&gt;
-</code></pre></div><p>Passing arguments to a computed binding:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>template</span>&gt;
-  &lt;<span style=color:#f92672>ProductComponent</span> <span style=color:#a6e22e>:cost</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;product_type(&#39;product_2&#39;)&#34;</span>&gt;&lt;/<span style=color:#f92672>ProductComponent</span>&gt;
-&lt;/<span style=color:#f92672>template</span>&gt;
-
-&lt;<span style=color:#f92672>script</span>&gt;
-  <span style=color:#66d9ef>import</span> <span style=color:#a6e22e>ProductComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#f92672>/</span><span style=color:#a6e22e>components</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ProductComponent</span>
-  
-  <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> {
-    <span style=color:#a6e22e>components</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>ProductComponent</span> },
-    <span style=color:#a6e22e>data</span>() {
-      <span style=color:#66d9ef>return</span> {
-        <span style=color:#a6e22e>products</span><span style=color:#f92672>:</span> {
-          <span style=color:#a6e22e>product_1</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;100&#39;</span>,
-          <span style=color:#a6e22e>product_2</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;200&#39;</span>,
-          <span style=color:#a6e22e>product_3</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;300&#39;</span>
-        }
-      }
-    },
-    <span style=color:#a6e22e>computed</span><span style=color:#f92672>:</span> {
-      <span style=color:#a6e22e>product_type</span>() {
-        <span style=color:#75715e>// Argument passed to arrow function, NOT computed function declaration.
-</span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> (<span style=color:#a6e22e>product_id</span>) =&gt; { <span style=color:#75715e>// Arrow function to allow &#39;this&#39; instance to be accessible.
-</span><span style=color:#75715e></span>          <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>products</span>[<span style=color:#a6e22e>product_id</span>]  <span style=color:#75715e>// Square bracket notation for &#39;any&#39; type variable
-</span><span style=color:#75715e></span>        }
-      }
-    }
-  }
-&lt;/<span style=color:#f92672>script</span>&gt;
-</code></pre></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<footer class="container-fluid text-center align-content-center footer pb-2">
-<div class="container pt-5">
-<div class="row text-left">
-<div class="col-md-4 col-sm-12">
-<h5>Navigation</h5>
-<ul>
-<li class=nav-item>
-<a class=smooth-scroll href=/#about>About</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=/#skills>Skills</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=/#experiences>Experiences</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=/#education>Education</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-<div class=container>
-<div class="row text-left">
-<div class=col-md-4>
-<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
-<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
-Toha
-</a>
-</div>
-<div class="col-md-4 text-center">© 2021 Copyright.</div>
-<div class="col-md-4 text-right">
-<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/notes data-filter=all>Notes</a></li><div class=subtree><li><i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/>Vue.js</a><ul class=active><li><i class="fas fa-minus-circle"></i><a class=active href=/notes/vue.js/basic/>Basic</a><ul class=active><li><a href=/notes/vue.js/basic/expressions/ title=Expressions>Expressions</a></li><li><a class=active href=/notes/vue.js/basic/binding/ title=Binding>Binding</a></li><li><a href=/notes/vue.js/basic/list-rendering/ title="List Rendering">List Rendering</a></li><li><a href=/notes/vue.js/basic/actions-events/ title=Actions/Events>Actions/Events</a></li><li><a href=/notes/vue.js/basic/bootstrap/ title=Bootstrap>Bootstrap</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/notes/vue.js/advanced/>Advanced</a><ul><li><a href=/notes/vue.js/advanced/lifecycle/ title="Lifecycle Hooks">Lifecycle Hooks</a></li><li><a href=/notes/vue.js/advanced/component-anatomy/ title="Component Anatomy">Component Anatomy</a></li><li><a href=/notes/vue.js/advanced/custom-events/ title="Custom Events">Custom Events</a></li></ul></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/notes/mongoose/>Mongoose.js</a><ul><li><i class="fas fa-plus-circle"></i><a href=/notes/mongoose/basic/>Bacic</a><ul><li><a href=/notes/mongoose/basic/connection/ title="Mongoose Connection">Mongoose Connection</a></li><li><a href=/notes/mongoose/basic/schema/ title="Mongoose Schema">Mongoose Schema</a></li></ul></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/notes/bash/>Bash</a><ul><li><a href=/notes/bash/basic/ title=Variables>Variables</a></li></ul></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Vuejs Binding</span></h5><div class=card><div class=card-body><p>Fullhand attribute binding</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>v-bind:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
+</span></span></code></pre></div><p>Shorthand</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>:href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;url&#34;</span>&gt;...&lt;/<span style=color:#f92672>a</span>&gt;
+</span></span></code></pre></div><p>Two way data binding</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>input</span> <span style=color:#a6e22e>v-model</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;firstName&#34;</span>&gt;
+</span></span></code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Vuejs Binding2</span></h5><div class=card><div class=card-body><p>True or false will add or remove attribute:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>:disabled</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;isButtonDisabled”</span>&gt;...
+</span></span></code></pre></div><p>If isActive is truthy, the class ‘active’ will appear:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ active: isActive }&#34;</span>&gt;...
+</span></span></code></pre></div><p>Style color set to value of activeColor:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>:style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{ color: activeColor }&#34;</span>&gt;
+</span></span></code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Vuejs Binding3</span></h5><div class=card><div class=card-body><p>Toggles the display: none CSS property:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>p</span> <span style=color:#a6e22e>v-show</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;showProductDetails&#34;</span>&gt;
+</span></span><span style=display:flex><span>  ...
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>p</span>&gt;
+</span></span></code></pre></div><p>Passing arguments to a computed binding:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#f92672>template</span>&gt;
+</span></span><span style=display:flex><span>  &lt;<span style=color:#f92672>ProductComponent</span> <span style=color:#a6e22e>:cost</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;product_type(&#39;product_2&#39;)&#34;</span>&gt;&lt;/<span style=color:#f92672>ProductComponent</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>template</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>import</span> <span style=color:#a6e22e>ProductComponent</span> <span style=color:#a6e22e>from</span> <span style=color:#960050;background-color:#1e0010>@</span><span style=color:#f92672>/</span><span style=color:#a6e22e>components</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ProductComponent</span>
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>components</span><span style=color:#f92672>:</span> { <span style=color:#a6e22e>ProductComponent</span> },
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>data</span>() {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>products</span><span style=color:#f92672>:</span> {
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>product_1</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;100&#39;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>product_2</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;200&#39;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>product_3</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;300&#39;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>computed</span><span style=color:#f92672>:</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>product_type</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Argument passed to arrow function, NOT computed function declaration.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span> (<span style=color:#a6e22e>product_id</span>) =&gt; { <span style=color:#75715e>// Arrow function to allow &#39;this&#39; instance to be accessible.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>          <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>products</span>[<span style=color:#a6e22e>product_id</span>]  <span style=color:#75715e>// Square bracket notation for &#39;any&#39; type variable
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        }
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span></code></pre></div></div></div></div></div></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=/#education>Education</a></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
 <script type=text/javascript src=/js/popper.min.js></script>
 <script type=text/javascript src=/js/bootstrap.min.js></script>
 <script type=text/javascript src=/js/navbar.js></script>
@@ -225,6 +57,4 @@ Toha
 <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
 <script src=/js/imagesloaded.pkgd.min.js></script>
 <script src=/js/note.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-</body>
-</html>
+<script>hljs.initHighlightingOnLoad()</script></body></html>
