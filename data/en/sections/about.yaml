@@ -7,14 +7,14 @@ section:
   template: sections/about.html # allows you to point to a specific template.
 
 # your designation
-designation: Frontend Software Developer
+designation: Fullstack Software Developer
 # your company information
 company:
-  name: Self Employed/Freelance.
-  url: "https://www.laminsanneh.com"
+  name: SOCi.
+  url: "https://www.meetsoci.com/"
 
 # a summary about you
-summary: 'Very passionate Frontend Software Developer who loves to dabble across various tech stacks, Vue.js, React.js, Laravel, Node.js you name it!'
+summary: 'Very passionate Fullstack Software Developer who loves to code and engineer across various tech stacks, Backbone.js, Vue.js, React.js, Laravel, Docker and Node.js, you name it!'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
