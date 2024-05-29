@@ -89,7 +89,7 @@ params:
 
     # Enable and configure blog posts
     blog:
-      enable: false
+      enable: true
       showAuthor: true # shows the author of post (defaults true)
       # Share post on different social media
       shareButtons:
@@ -144,7 +144,7 @@ params:
 
     # Enable Analytics
     analytics:
-      enabled: true
+      enabled: false
       services:
         # Google Analytics
         google:
