@@ -6,68 +6,259 @@ section:
   weight: 3
   showOnNavbar: true
   # Can optionally hide the title in sections
-  # hideTitle: true 
+  # hideTitle: true
 
 # Your experiences
+# experiences:
+# - company:
+#     name: Example Co.
+#     url: "https://www.example.com"
+#     location: Dhaka Branch
+#     logo: /images/sections/experiences/company1.jpg
+#     # Can optionally show a different logo for dark theme
+#     # darklogo: /images/sections/experiences/company1.jpg
+#     # company overview
+#     overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+#   positions:
+#   - designation: Senior Software Engineer
+#     start: Nov 2019
+#     # don't provide end date if you are currently working there. It will be replaced by "Present"
+#     # end: Dec 2020
+#     # give some points about what was your responsibilities at the company.
+#     responsibilities:
+#     - Design and develop XYZ tool for ABC task
+#     - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
+#     - Lead backend team.
+
+#   - designation: Junior Software Engineer
+#     start: Nov 2017
+#     end: Oct 2019
+#     responsibilities:
+#     - Implement and test xyz feature for abc tool.
+#     - Support client for abc tool.
+#     - Learn k,d,w technology for xyz.
+
+# - company:
+#     name: PreExample Co.
+#     url: "https://www.example.com"
+#     location: Nowhere
+#     logo: /images/sections/experiences/company2.jpg
+#     # Can optionally show a different logo for dark theme
+#     # darklogo: /images/sections/experiences/company2.jpg
+#     overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+#   positions:
+#   - designation: Software Engineer
+#     start: March 2016
+#     end: May 2017
+#     responsibilities:
+#     - Write lots of example codes.
+#     - Read lots of examples.
+#     - See lots of example videos.
+
+# - company:
+#     name: Intern Counting Company (ICC).
+#     url: "https://www.example.com"
+#     location: Intern Land
+#     logo: /images/sections/experiences/company3.jpg
+#     # Can optionally show a different logo for dark theme
+#     # darklogo: /images/sections/experiences/company3.jpg
+#     overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
+#   positions:
+#   - designation: Intern
+#     start: Jun 2015
+#     end: Jan 2016
+#     responsibilities:
+#     - Count lost of interns.
+#     - Count more interns.
+#     - Count me as an intern.
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
-    logo: /images/sections/experiences/company1.jpg
-    # Can optionally show a different logo for dark theme
-    # darklogo: /images/sections/experiences/company1.jpg
+    name: SOCi
+    url: "https://www.meetsoci.com/"
+    location: San Diego, United States
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: A social media marketting company based in California, San Diego.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
+  - designation: Fullstack Developer
+    start: November 2021
+    end: July 2023
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Worked with a vast range of technologies ranging from GraphQl, highly customized drag and drop Javascript widgets, Grafana, Elastic Search, Php, Backbone.js.
+    - The team setup there was using Mob Programming
+    - The team there were extremely skilled, so I learnt a lot
+    - We used Docker for our develpment environment
+    - Jenkins, along with Github and Docker to test, deploy and run the production application
+    - There were several repos ranging in technologies from Laravel, Backbone.js, GraphQL e.t.c
+    - Testing was heavily emphasized, whether unit tests in PHPUnit, Integration tests using cypress, to manual testing
+    - We used Figma when collaborating with designers and Product Managers to communicate UI changes
+
+- company:
+    name: Yaraku
+    url: "https://www.yaraku.com"
+    location: Tokyo, Japan
+    # company overview
+    overview: A translation company based in tokyo, providing software services for companies internationally.
+  positions:
+  - designation: Frontend Developer
+    start: Apr 2016
+    end: Mar 2021
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
+    - Design and develop frontend widgets for items like lists, pagination, popups, tutorial guides.
+    - Connect frontend components to backend apis and add error handling.
+    - Write maintainable code using best practises like SOLID principles.
+    - Develop frontend system using a combination of Backbone.js, Angular.js, and React.js.
+    - Helped in transitioning the frontend system incrementally to use React.js.
+    - Design and develop main app's backend systems for email templates, create tests, database schemas and create apis for the frontend.
+    - Overtime, maintained the test and build pipeline using jenkins and docker.
+    - Led the design and development of the main company website(http://www.yaraku.com) and main app website(https://www.yarakuzen.com/en)
+    - Maintained and optimized our websites for S.E.O. using google analytics, google webmaster and google tag manager.
 
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
-
-- company:
-    name: PreExample Co.
-    url: "https://www.example.com"
-    location: Nowhere
-    logo: /images/sections/experiences/company2.jpg
-    # Can optionally show a different logo for dark theme
-    # darklogo: /images/sections/experiences/company2.jpg
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
-  positions:
-  - designation: Software Engineer
-    start: March 2016
-    end: May 2017
-    responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+  # - designation: Junior Software Engineer
+  #   start: Nov 2017
+  #   end: Oct 2019
+  #   responsibilities:
+  #   - Implement and test xyz feature for abc tool.
+  #   - Support client for abc tool.
+  #   - Learn k,d,w technology for xyz.
 
 - company:
-    name: Intern Counting Company (ICC).
-    url: "https://www.example.com"
-    location: Intern Land
-    logo: /images/sections/experiences/company3.jpg
-    # Can optionally show a different logo for dark theme
-    # darklogo: /images/sections/experiences/company3.jpg
-    overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
+    name: SuprTickets
+    url: "https://twitter.com/suprtickets"
+    location: Manchester, UK (Freelance Contract)
+    overview: A website which aggregates ticket prices of events(music concerts, sports, e.t.c.) from several apis and offers the results in a single website to the customer
   positions:
-  - designation: Intern
-    start: Jun 2015
-    end: Jan 2016
+  - designation: Fullstack Developer
+    start: Dec 2015
+    end: March 2016
     responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    - Redesigned the frontend interface with new requirements as specified.
+    - Fixed broken search future when I took on the contract.
+    - Also, had to clean up and refactor the frontend html, css, javascript(jQuery) and backend code(php, bash and mysql)
+    - Worked with imported api data files in the form of csv from several other ticket vendors.
+    - Built bash scripts which ran periodically as cron jobs to import the csv directly into the database for efficiency.
+    - Organized the different imported data formats from the several vendors in the database in proper formats suitable for easier universal querying.
+    - Added index to the database to to optimize search and make the website work faster.
+
+- company:
+    name: Open Business Solutions
+    # url: "https://www.example.com"
+    location: Singapore
+    overview: A software company providing customized Enterprise ReResource Planning(ERP) solutions to companies to help them carry on their unique processes in their business.
+  positions:
+  - designation: Fullstack Developer
+    start: Dec 2014
+    end: Dec 2015
+    responsibilities:
+    - Worked with Angular.js, Node.js and Meteor.js to create kanban board based system (similar to trello) for each company's requirement.
+    - I was responsible for creating frontend widgets for each phase of the kanban board.
+    - We used coffeescript in the backend
+    - Worked as part of the team responsible for converting the app from direct Node.js to Meteor.js as it had a more powerful realtime update system as the changes needed to be reflected for each user in realtime.
+    - Worked on creating integration tests for both frontend and backend which would have to pass before the code is deployed.
+    - Later, I worked on a project to make a drag and drop type system so customers can create (on their own), their own set of customized fields (texts, file upload, checkboxes e.t.c.) for each stage of their process corresponding to each kanban board card
+
+- company:
+    name: Freelance(during University final year)
+    # url: "https://www.example.com"
+    location: Manchester
+    overview: Worked remotely as a freelancer.
+  positions:
+  - designation: Web developer
+    start: July 2013
+    end: Aug 2014
+    responsibilities:
+    - Worked as a freelance working on several small projects ranging from wordpress development, single page app development using Ember.js, and Php framework called Octobercms.
+    - I built an event planner app for a team in Australia, remotely, using Ember.js, my favorite framework during this time.
+    - I also did my dissertation by using Ember.js and Laravel as this work period conincided with my final year in University.
+    - I also used some of the time to build my yputube channel with more tutorials.
+
+- company:
+    name: R&R Music Ltd
+    # url: "https://www.example.com"
+    location: London
+    overview: A music company in the same category of the likes of spotify, deezer.
+  positions:
+  - designation: Web Developer - Frontend concept developer (Internship)
+    start: May 2013
+    end: July 2013
+    responsibilities:
+    - I was involved with taking design concepts through rapid prototype phases to see if they were feasible to be implemented for production.
+    - Worked with the said music company above. While there, I had to create frontend prototypes using jQuery, Ember.js, vanilla Js, SASS CSS and HTML.
+    - This was so that we could give interactive concept demonstrations to our investors and partners before the final products are to be developed.
+    - I collaborated with the team in Kiev(Ukraine), as the company was based in London but had other international headquarters in USA, Spain and Ukraine
+    - I also had to collaborate with graphic designers, UX designers who were from different parts of Europe in-house to create prototypes.
+    - This was around teh time when responsive design was a big buzzword and I was invited to give a presentation on it to the rest of the company by my manager, which was a valuable experience to me as I had to explain the concept to non-programmers as well.
+
+- company:
+    name: Gazprom Energy
+    url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: A russian company, with subsidiaries in Uk, specializing in selling energy(gas and electricity).
+  positions:
+  - designation: ASP.Net/C# Software Developer
+    start: 2012
+    end: 2013
+    responsibilities:
+    - I worked here using microsoft technologies like MS SQL server, Visual Studio, entity framework.
+    - I was in charge of several applications, one of which is a reporting application, used by several departments.
+    - The app was built using WPF(Windows Presentation FOundation), and was quite complex with several micro services all bundled in a monolithic package, each communicating with each other using C# interfaces.
+    - Sometimes, before a feature was completed, I had to write some complex SQL to export the report in excel format so the in-house client can carry out their task.
+    - The application features went through several stages of development, alpha and testing before being released to the end user.
+    - I gained valuable experience using C# which I self-learned. Using entity framework was really fun and it opened a whole new world of experience when it came to software development and interfacing with the database.
+    - I gained valuable experience while working there, not just technically but also how to work better and more efficiently in a team.
+
+- company:
+    name: Travel Indigo(Part time)
+    # url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: An international Group Travel and hotel booking agency.
+  positions:
+  - designation: PHP Web Developer
+    start: 2011
+    end: 2012
+    responsibilities:
+    - While at University, I worked parttime for a travel agency called Travel Indigo, which specializes in group travel internationally and hotel bookings.
+    - I and another webd eveloper were responsible for building the initial version of the travel website.
+    - We had to tap into several apis, primarily travelport, which at that stage only supported xml results(now I believe they do json).
+    - The xml is parsed using php libraries(Zend framework) and stored in a more manageable format in our database.
+    - We had to setup a system which used advanced ajax to make backend calls.
+    - The backend then caches the results which the user searches so we do not hit the external APIs unnecessarily.
+    - We also built custom websites for other individuals or companies who wanted to open their own fligh agency business. The custom sites were based on our base site.
+    - Since it was a small team, I was responsible for the design, backend and frontend development.
+    - We used vanilla php coupled with some libraries from Zend framework.
+    - While there, I was the lead technical team leader, and along with my I.T., manager conducted several interviews to add more developers to the team, and have learned valuable communication skills through that.
+
+- company:
+    name: Manchester Notebook
+    # url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: A Manchester university group which provides a platform where several of University societies can connect, recruit and communicate with their members and potential members.
+  positions:
+  - designation: PHP Web Developer
+    start: 2011
+    end: 2011
+    responsibilities:
+    - I used this opportunity to Jumpstart my web development career.
+    - It was the first time, I had to build a commercial website.
+    - Using vanilla PHP (dreamweaver), Mysql, HTML and CSS.
+    - I gained valuable communication skills, having to have regular meeting with the owners to give status feedback and plan the next stage of development.
+
+- company:
+    name: University of Manchester First Year Project
+    # url: "https://www.gazprom-energy.co.uk"
+    location: Manchester
+    overview: Manchester University First year project
+  positions:
+  - designation: PHP Web Developer
+    start: 2010
+    end: 2011
+    responsibilities:
+    - I led a team of five in our University web project.
+    - Using codeigniter php framework, we were tasked with building a sports website where sport teams can list their team details and let players apply to join the team.
+    - We used jQuery along with css and the php framework to carry out the tasks.
+    - Later, we had to demonstrate the project in fron of the other teams.
+    - We learned how to work independently as we had to do all the research without any prior knowledge.
+    - I gained valuable project planning and team communication experiences while working on this project.
