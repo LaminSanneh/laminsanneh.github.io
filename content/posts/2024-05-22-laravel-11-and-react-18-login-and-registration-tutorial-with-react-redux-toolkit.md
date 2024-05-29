@@ -8,8 +8,9 @@ tags: []
 categories:
   - Laravel
   - React.js
-type: default
+type: posts
 slug: laravel-11-react-18-login-registration-tutorial-react-redux-toolkit
+hero: /images/posts/2024-05-22-laravel-11-and-react-18-login-and-registration-tutorial-with-react-redux-toolkit.png
 ---
 
 ## Introduction
