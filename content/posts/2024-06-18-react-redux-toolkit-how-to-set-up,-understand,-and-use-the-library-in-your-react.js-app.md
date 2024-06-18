@@ -1,5 +1,5 @@
 ---
-title: React Redux Toolkit How to Set Up, Understand, and Use the library in Your React.js App
+title: React Redux Toolkit with Typescript How to Set Up, Understand, and Use the library in Your React.js App
 description: ""
 date: 2024-06-18T11:09:36.526Z
 preview: ""
@@ -8,10 +8,10 @@ tags: []
 categories:
     - React.js
 type: posts
-slug: react-redux-toolkit-set-understand-library-react-js-app
+slug: react-redux-toolkit-typescript-set-understand-library-react-js-app
 ---
 
-Integrating Redux into your React application can enhance your state management, making your app more robust and scalable. Redux Toolkit simplifies this process by providing a set of tools and best practices. This guide will walk you through setting up Redux Toolkit in a React application, understanding its key components, and effectively using it to manage your app's state.
+Using typescript and integrating React Redux toolkit into your React application can enhance your state management, making your app more robust and scalable. Redux Toolkit simplifies this process by providing a set of tools and best practices. This guide will walk you through setting up Redux Toolkit in a React application, understanding its key components, and effectively using it to manage your app's state.
 
 ### Step 1: Setting Up Redux Toolkit
 
@@ -33,7 +33,7 @@ import { useDispatch, useSelector, useStore } from "react-redux";
 // Combine your slice reducers
 const rootReducer = combineReducers({
   post: postSlice,
-  user: userSlice,
+  user: userSlice, // We wont implement this slice, but leaving here to show that multiple reducers can be combined this way
 });
 
 // Configure the store
@@ -140,13 +140,13 @@ Wrapping your application with the Provider component makes the Redux store avai
 
 
 ### Step 4: Using Custom Hooks for State and Dispatch
-To interact with the Redux store, use the custom hooks useAppDispatch and useAppSelector that you defined in StorageEvent.ts.
+To interact with the Redux store, use the custom hooks useAppDispatch and useAppSelector that you defined in store.ts.
 
 Example Usage in a Component
 
 ```tsx
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "./StorageEvent";
+import { useAppDispatch, useAppSelector } from "./store";
 import { fetchPosts } from "./slices/postSlice";
 
 const PostList: React.FC = () => {
