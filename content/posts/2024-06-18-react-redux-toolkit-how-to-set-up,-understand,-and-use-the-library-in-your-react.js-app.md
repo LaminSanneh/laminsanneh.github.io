@@ -9,6 +9,7 @@ categories:
     - React.js
 type: posts
 slug: react-redux-toolkit-typescript-set-understand-library-react-js-app
+hero: /images/posts/2024-06-18-react-redux-toolkit-how-to-set-up,-understand,-and-use-the-library-in-your-react.js-app.png
 ---
 
 Using typescript and integrating React Redux toolkit into your React application can enhance your state management, making your app more robust and scalable. Redux Toolkit simplifies this process by providing a set of tools and best practices. This guide will walk you through setting up Redux Toolkit in a React application, understanding its key components, and effectively using it to manage your app's state.
