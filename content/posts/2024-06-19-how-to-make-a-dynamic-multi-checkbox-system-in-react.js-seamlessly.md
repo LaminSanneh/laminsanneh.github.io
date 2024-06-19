@@ -8,6 +8,7 @@ tags: []
 categories: []
 type: posts
 slug: dynamic-multi-checkbox-system-react-js-seamlessly
+hero: /images/posts/2024-06-19-how-to-make-a-dynamic-multi-checkbox-system-in-react.js-seamlessly.png
 ---
 
 ### Introduction
