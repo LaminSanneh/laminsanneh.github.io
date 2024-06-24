@@ -42,6 +42,61 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "Hero",
+          "name": "hero",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "personalprojects",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Project URL",
+          "name": "projectUrl",
+          "type": "string"
+        },
+        {
+          "title": "Extra Project URLS",
+          "name": "extraProjectUrl",
+          "type": "list"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Project Images",
+          "name": "projectImages",
+          "type": "image",
+          "multiple": true
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
         }
       ]
     }
@@ -56,7 +111,13 @@
     },
     {
       "title": "posts",
-      "path": "[[workspace]]/content/posts"
+      "path": "[[workspace]]/content/posts",
+      "contentTypes": ["posts"]
+    },
+    {
+      "title": "personalprojects",
+      "path": "[[workspace]]/content/personalprojects",
+      "contentTypes": ["personalprojects"]
     }
   ]
 }

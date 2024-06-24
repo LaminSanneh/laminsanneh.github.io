@@ -1,3 +1,3 @@
 #!/bin/bash
 # hugo server --theme toha --watch
-hugo server --
+hugo server -- forceSyncStatic --cleanDestinationDir

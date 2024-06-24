@@ -1,0 +1,14 @@
+.project-images {
+    // display: flex;
+    // text-align: center;
+    display: grid;
+    // display: inline-grid;
+    gap: 40px 40px;
+    grid-template-columns: auto auto auto;
+
+    .personal-project-image {
+        position: relative;
+        display: inline-block;
+        // width: 40%;
+    }
+}

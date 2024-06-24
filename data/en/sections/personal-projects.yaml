@@ -1,9 +1,9 @@
 # section information
 section:
-  name: Recent Posts
-  id: recent-posts
+  name: Recent Work
+  id: personal-projects
   enable: true
-  weight: 2.6
+  weight: 2.5
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true

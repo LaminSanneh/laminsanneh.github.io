@@ -10,6 +10,8 @@ module:
   mounts:
   - source: static/files
     target: static/files
+  - source: static/images
+    target: static/images
   - source: ./node_modules/flag-icon-css/flags
     target: static/flags
   - source: ./node_modules/@fontsource/mulish/files
@@ -103,6 +105,9 @@ params:
         # pocket: true
         # diaspora: true
         # mastodon: true
+
+    personalprojects:
+      enable: true
 
     # Enable & configure "Notes" features
     notes:
