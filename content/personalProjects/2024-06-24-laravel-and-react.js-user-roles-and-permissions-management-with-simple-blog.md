@@ -1,7 +1,7 @@
 ---
 title: Laravel and React.Js User Roles and Permissions Management with simple Blog
 description: ""
-projectUrl: ""
+projectUrl: https://github.com/LaminSanneh/tutorial-repo-local-practise.git
 extraProjectUrl: []
 date: 2024-06-24T07:51:15.870Z
 projectImages:
@@ -18,5 +18,5 @@ draft: false
 categories: []
 type: personalprojects
 slug: laravel-react-js-user-roles-permissions-management-simple-blog
-hero: /images/posts/2024-06-24-laravel-and-react.js-user-roles-and-permissions-management-with-simple-blog.png
+hero: /images/personalprojects/2024-06-24-laravel-and-reactjs-user-roles-and-permissions-management-with-simple-blog.png
 ---

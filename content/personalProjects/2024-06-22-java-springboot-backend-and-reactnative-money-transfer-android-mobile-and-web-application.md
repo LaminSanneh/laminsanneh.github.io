@@ -14,6 +14,6 @@ projectImages:
 draft: false
 categories: []
 type: personalprojects
-hero: /images/posts/2024-06-22-java-springboot-backend-and-reactnative-money-transfer-android-mobile-and-web-application.png
+hero: /images/personalprojects/2024-06-22-java-springboot-backend-and-reactnative-money-transfer-android-mobile-and-web-application.png
 slug: java-springboot-backend-reactnative-money-transfer-android-mobile-web-application
 ---
