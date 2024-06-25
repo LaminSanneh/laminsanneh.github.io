@@ -1,0 +1,199 @@
+<!doctype html><html lang=en><head><title>How to Dockerize a Laravel 11 and React 18 Application for Development</title>
+<meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel=stylesheet href=/application.838d4de71da17802fc5f13c5d46cbc081fe9b3f2d6519eb71f05bb2b4d908664.css integrity="sha256-g41N5x2heAL8XxPF1Gy8CB/ps/LWUZ63HwW7K02QhmQ="><meta property="og:url" content="http://laminsanneh.com/posts/dockerize-laravel-11-react-18-application-development/"><meta property="og:site_name" content="Lamin Sanneh"><meta property="og:title" content="How to Dockerize a Laravel 11 and React 18 Application for Development"><meta property="og:description" content="Introduction Docker has become a popular choice for development environments due to its ability to containerize applications and simplify deployment across different systems. This guide will walk you through dockerizing a Laravel 11 backend and React 18 frontend application, using Docker Compose to orchestrate multiple services. We wil assume that your laravel and react apps live in seperate folders and will be served through different domain. Suffice to say that the react app will not be served from the laravel backend but will use the laravel backend only as an api service."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-06-25T13:03:26+00:00"><meta property="article:modified_time" content="2024-06-25T13:03:26+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="How to Dockerize a Laravel 11 and React 18 Application for Development"><meta name=twitter:description content="Introduction Docker has become a popular choice for development environments due to its ability to containerize applications and simplify deployment across different systems. This guide will walk you through dockerizing a Laravel 11 backend and React 18 frontend application, using Docker Compose to orchestrate multiple services. We wil assume that your laravel and react apps live in seperate folders and will be served through different domain. Suffice to say that the react app will not be served from the laravel backend but will use the laravel backend only as an api service."><meta name=description content="How to Dockerize a Laravel 11 and React 18 Application for Development"><script>theme=localStorage.getItem("darkmode:color-scheme")||"system",theme=="system"&&(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?theme="dark":theme="light"),document.documentElement.setAttribute("data-theme",theme)</script></head><body class="type-posts kind-page" data-bs-spy=scroll data-bs-target=#TableOfContents data-bs-offset=80><div class="container-fluid bg-secondary wrapper"><nav class="navbar navbar-expand-xl top-navbar shadow" id=top-navbar><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button>
+<i data-feather=sidebar></i>
+</button>
+<a class=navbar-brand href=/>Lamin Sanneh</a>
+<button class="navbar-toggler navbar-light" id=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#top-nav-items aria-label=menu>
+<i data-feather=menu></i></button><div class="collapse navbar-collapse dynamic-navbar" id=top-nav-items><ul class="nav navbar-nav ms-auto"><li class=nav-item><a class=nav-link href=/#home>Home</a></li><li class=nav-item><a class=nav-link href=/#about>About</a></li><li class=nav-item><a class=nav-link href=/#personal-projects>Recent Work</a></li><li class=nav-item><a class=nav-link href=/#recent-posts>Recent Posts</a></li><li class=nav-item><a class=nav-link href=/#experiences>Experiences</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false>More</a><div class=dropdown-menu aria-labelledby=navbarDropdown><a class=dropdown-item href=/#education>Education</a></div></li><div id=top-navbar-divider></div><li class=nav-item><a class=nav-link id=blog-link href=/posts>Posts</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-bs-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div id=themeMenu class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# data-scheme=light><img class=theme-icon src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme">
+</a><a class="dropdown-item nav-link" href=# data-scheme=dark><img class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme">
+</a><a class="dropdown-item nav-link" href=# data-scheme=system><img class=theme-icon src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts/ data-filter=all>Posts</a></li><div class=subtree></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/images/posts/2024-06-25-how-to-dockerize-a-laravel-11-and-react-18-application-for-development.png)></div><div class=page-content><div class="author-profile ms-auto align-self-lg-center"><img class=rounded-circle src=/images/author/my-headshot-optimized_hu03e2b43b5598129826693742f331c316_174004_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Lamin Sanneh</h5><p class=text-muted>Tuesday, June 25, 2024 | 6 minutes</p></div><div class=title><h1>How to Dockerize a Laravel 11 and React 18 Application for Development</h1></div><div class=tags><ul style=padding-left:0></ul></div><div class=post-content id=post-content><h3 id=introduction>Introduction</h3><p>Docker has become a popular choice for development environments due to its ability to containerize applications and simplify deployment across different systems. This guide will walk you through dockerizing a Laravel 11 backend and React 18 frontend application, using Docker Compose to orchestrate multiple services. We wil assume that your laravel and react apps live in seperate folders and will be served through different domain. Suffice to say that the react app will not be served from the laravel backend but will use the laravel backend only as an api service.</p><h4 id=docker-compose-configuration>Docker Compose Configuration</h4><p>First, create a <code>docker-compose.yml</code> file in your project&rsquo;s root directory:</p><pre tabindex=0><code>version: &#39;3&#39;
+
+services:
+  app:
+    build:
+      context: ./laravel-11-backend
+      dockerfile: Dockerfile
+    ports:
+      - &#34;8000:9000&#34;
+    volumes:
+      - ./laravel-11-backend:/var/www/html
+      - ./laravel-11-backend/storage:/var/www/html/storage
+      - ./laravel-11-backend/bootstrap/cache:/var/www/html/bootstrap/cache
+    networks:
+      - laravel-network
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laravel_react_blog_user_permission
+      MYSQL_USER: app
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: vicecity
+    ports:
+      - &#34;3306:3306&#34;
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - laravel-network
+
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - &#34;80:80&#34;
+    volumes:
+      - ./laravel-11-backend:/var/www/html
+    networks:
+      - laravel-network
+    depends_on:
+      - app
+
+  frontend:
+    build:
+      context: ./react-18-frontend
+      dockerfile: Dockerfile
+    ports:
+      - &#34;5173:5173&#34;
+    volumes:
+      - ./react-18-frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - laravel-network
+    depends_on:
+      - app
+
+networks:
+  laravel-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+</code></pre><p>Then in the root folder where the <code>docker-compose.yml</code> file is, create three folders if they dont exist already.<code>laravel-11-backend</code> for your laravel folder. <code>react-18-frontend</code> for the react app and <code>nginx</code> for the nginx files.</p><p><strong>Breakdown of <code>docker-compose.yml</code>:</strong></p><ol><li><p><code>app</code> Service (Laravel Backend):</p><p>Builds from <code>./laravel-11-backend</code> using <code>Dockerfile</code>.
+Exposes port <code>9000</code> internally, mapped to <code>8000</code> externally on the local machine.
+Mounts Laravel directories for code and storage.
+Depends on mysql service and connects to by setting <code>DB_HOST</code> environment variable.</p></li><li><p><code>mysql</code> Service:</p><p>Uses MySQL 8.0 image with predefined environment variables for database setup.
+Exposes port <code>3306</code> for database connections.
+Persists MySQL data to <code>mysql_data</code> volume.</p></li><li><p><code>nginx</code> Service:</p><p>Builds from ./nginx folder using its Dockerfile.
+Forwards port 80 to serve Laravel&rsquo;s public directory.
+Mounts Laravel directory to serve PHP files through PHP-FPM.</p></li><li><p><code>frontend</code> Service (React Frontend):</p><p>Builds from ./react-18-frontend using Dockerfile.
+Exposes port 5173 for React development server.
+Mounts React source code and node_modules for live updates.</p></li><li><p>Networks and Volumes:</p><p>Defines a laravel-network for communication between services.
+Creates mysql_data volume for MySQL data persistence.</p></li></ol><h4 id=dockerfiles-and-configuration-files>Dockerfiles and Configuration Files</h4><p>Here are the Dockerfiles and configuration files used in the setup:</p><br><ul><li><strong>Laravel Backend Dockerfile (laravel-11-backend/Dockerfile):</strong></li></ul><pre tabindex=0><code>FROM php:8.2-fpm
+
+RUN apt-get update &amp;&amp; apt-get install -y \
+    git \
+    curl \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    zip \
+    unzip \
+    libonig-dev \
+    libxml2-dev \
+    netcat-openbsd \
+    &amp;&amp; apt-get clean &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+# Install PHP extensions
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    &amp;&amp; docker-php-ext-install gd pdo pdo_mysql mbstring exif pcntl bcmath xml
+
+# Install Composer
+COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy existing application directory contents
+COPY . .
+
+# Copy entrypoint script
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Install Laravel dependencies
+RUN composer install --optimize-autoloader --no-dev
+
+# Expose port 9000
+EXPOSE 9000
+
+ENTRYPOINT [&#34;/usr/local/bin/entrypoint.sh&#34;]
+</code></pre><p><strong>Breakdown of Laravel Backend Dockerfile:</strong></p><ol><li><p>Base Image: <code>php:8.2-fpm</code></p><p>Uses PHP 8.2 with FPM (FastCGI Process Manager) for handling PHP requests efficiently.</p></li><li><p>Dependencies Installation:</p><p>Installs essential packages like <code>git</code>, <code>curl</code>, <code>zip</code>, <code>unzip</code>, etc., necessary for Laravel and Composer operations.
+Installs specific PHP extensions (<code>gd</code>, <code>pdo_mysql</code>, <code>mbstring</code>, etc.) required by Laravel for image processing, database connectivity, and string manipulation.</p></li><li><p>Composer Installation:</p><p>Copies Composer from the Composer image (<code>composer:2.2</code>) into the PHP image, making it globally accessible.
+Allows dependency management and package installation within the container.</p></li><li><p>Working Directory and Application Setup:</p><p>Sets the working directory within the container to <code>/var/www/html</code>, the standard directory for web applications in many PHP environments.
+Copies all application files into the container, including Laravel&rsquo;s codebase.</p></li><li><p>Permissions and Laravel Setup:</p><p>Adjusts file ownership (<code>www-data:www-data</code>) to ensure Laravel can read and write necessary files.
+Installs Laravel dependencies using Composer, optimizing the autoloader and excluding development packages (<code>--optimize-autoloader --no-dev</code>).</p></li><li><p>Port Exposition:</p><p>Exposes port <code>9000</code> to allow PHP-FPM to communicate with Nginx for processing PHP scripts.</p></li><li><p>Entrypoint Script:</p><p>Copies an entrypoint script (<code>entrypoint.sh</code>) that waits for MySQL to be ready before executing commands like database migrations and seeding.
+Executes PHP-FPM to serve PHP applications.</p></li></ol><br><ul><li><strong>Nginx Dockerfile (nginx/Dockerfile):</strong></li></ul><pre tabindex=0><code>FROM nginx:1.21.6
+
+# Copy the Nginx configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+</code></pre><p><strong>Breakdown of Nginx Dockerfile:</strong></p><ol><li><p>Base Image: <code>nginx:1.21.6</code></p><p>Uses the official Nginx image version <code>1.21.6</code> from Docker Hub as the base.</p></li><li><p>Custom Configuration:</p><p>Copies a custom Nginx configuration file (<code>nginx.conf</code>) to replace the default configuration.
+Configures Nginx to serve the Laravel application located in <code>/var/www/html/public</code>, directing traffic to PHP-FPM for PHP script processing.</p></li><li><p>Port Exposition:</p><p>Exposes port <code>80</code> to allow external HTTP traffic to access the web application served by Nginx.</p></li></ol><br><ul><li><strong>Nginx Configuration (nginx/nginx.conf):</strong></li></ul><pre tabindex=0><code>server {
+    listen 80;
+    server_name localhost;
+
+    root /var/www/html/public;
+    index index.php index.html;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass app:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
+</code></pre><br><ul><li><strong>React Frontend Dockerfile (react-18-frontend/Dockerfile):</strong></li></ul><pre tabindex=0><code>FROM node:18-alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 5173
+
+CMD [&#34;npm&#34;, &#34;run&#34;, &#34;dev&#34;]
+</code></pre><p><strong>Breakdown of React Frontend Dockerfile:</strong></p><ol><li><p>Base Image: <code>node:18-alpine</code></p><p>Uses Node.js version <code>18</code> based on Alpine Linux, a lightweight and secure base image for Node.js applications.</p></li><li><p>Working Directory and Dependencies:</p><p>Sets the working directory within the container to <code>/usr/src/app</code>, a common practice for Node.js applications.
+Copies <code>package.json</code> and <code>package-lock.json</code> to install dependencies separately from application code to leverage Docker&rsquo;s layer caching.</p></li><li><p>Dependency Installation:</p><p>Runs <code>npm install</code> to install all dependencies listed in <code>package.json</code>, optimizing for Docker builds.</p></li><li><p>Application Setup:</p><p>Copies all application code (<code>COPY . .</code>) into the container after installing dependencies.
+This step ensures that changes in the application code trigger rebuilds of Docker layers that depend on it, speeding up development workflows.</p></li><li><p>Port Exposition:</p><p>Exposes port <code>5173</code>, which is typically used by React&rsquo;s development server (<code>npm run dev</code>), allowing external access during development.</p></li><li><p>Command to Run Application:</p><p>Specifies the default command (<code>CMD</code>) to start the application using <code>npm run dev</code>, which runs the React development server.</p></li></ol><h4 id=vite-configuration>Vite Configuration</h4><p>If you happen to be usng <code>vite</code> for building your react app, make sure your Vite configuration (vite.config.js) is set up to allow the server to be accessed from outside the container. Update your vite.config.js as follows:</p><pre tabindex=0><code>import { defineConfig } from &#39;vite&#39;
+import react from &#39;@vitejs/plugin-react&#39;
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: true, // This allows Vite to accept connections from outside the container
+    port: 5173, // The port Vite will run on
+    strictPort: true, // If the port is already used, Vite will fail instead of picking another port
+    watch: {
+      usePolling: true, // This is needed to work well inside Docker
+    },
+  },
+})
+</code></pre><h4 id=conclusion>Conclusion</h4><p>Each Dockerfile serves a crucial role in containerizing different components of your application stack. The Laravel backend Dockerfile configures PHP and Composer dependencies, the Nginx Dockerfile customizes Nginx for serving PHP applications, and the React frontend Dockerfile sets up Node.js for developing and serving React applications. Together with Docker Compose, these files orchestrate a unified development environment, ensuring consistency across different machines and simplifying the setup for your Laravel 11 and React 18 application development.</p><p>This setup ensures that your development environment closely mirrors your production setup, facilitating smoother deployments and collaboration.</p></div><div class="row ps-3 pe-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn icon-button bg-facebook" href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flaminsanneh.com%2fposts%2fdockerize-laravel-11-react-18-application-development%2f" target=_blank><i class="fab fa-facebook"></i>
+</a><a class="btn icon-button bg-twitter" href="https://twitter.com/share?url=http%3a%2f%2flaminsanneh.com%2fposts%2fdockerize-laravel-11-react-18-application-development%2f&text=How%20to%20Dockerize%20a%20Laravel%2011%20and%20React%2018%20Application%20for%20Development&via=Lamin%20Sanneh" target=_blank><i class="fab fa-twitter"></i>
+</a><a class="btn icon-button bg-reddit" href="https://reddit.com/submit?url=http%3a%2f%2flaminsanneh.com%2fposts%2fdockerize-laravel-11-react-18-application-development%2f&title=How%20to%20Dockerize%20a%20Laravel%2011%20and%20React%2018%20Application%20for%20Development" target=_blank><i class="fab fa-reddit"></i>
+</a><a class="btn icon-button bg-linkedin" href="https://www.linkedin.com/shareArticle?url=http%3a%2f%2flaminsanneh.com%2fposts%2fdockerize-laravel-11-react-18-application-development%2f&title=How%20to%20Dockerize%20a%20Laravel%2011%20and%20React%2018%20Application%20for%20Development" target=_blank><i class="fab fa-linkedin"></i>
+</a><a class="btn icon-button bg-whatsapp" href="https://api.whatsapp.com/send?text=How%20to%20Dockerize%20a%20Laravel%2011%20and%20React%2018%20Application%20for%20Development http%3a%2f%2flaminsanneh.com%2fposts%2fdockerize-laravel-11-react-18-application-development%2f" target=_blank><i class="fab fa-whatsapp"></i>
+</a><a class="btn icon-button" href="mailto:?subject=How%20to%20Dockerize%20a%20Laravel%2011%20and%20React%2018%20Application%20for%20Development&body=http%3a%2f%2flaminsanneh.com%2fposts%2fdockerize-laravel-11-react-18-application-development%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/hugo-toha/hugo-toha.github.io/edit/main/content/posts/2024-06-25-how-to-dockerize-a-laravel-11-and-react-18-application-for-development.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr></div></div></div><a id=scroll-to-top class=btn type=button data-bs-toggle=tooltip data-bs-placement=left title="Scroll to top"><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center ps-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><ul><li><a href=#introduction>Introduction</a><ul><li><a href=#docker-compose-configuration>Docker Compose Configuration</a></li><li><a href=#dockerfiles-and-configuration-files>Dockerfiles and Configuration Files</a></li><li><a href=#vite-configuration>Vite Configuration</a></li><li><a href=#conclusion>Conclusion</a></li></ul></li></ul></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-start"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=http://laminsanneh.com/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=http://laminsanneh.com/#personal-projects>Recent Work</a></li><li class=nav-item><a class=smooth-scroll href=http://laminsanneh.com/#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=http://laminsanneh.com/#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=http://laminsanneh.com/#education>Education</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:lamin.evra@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>lamin.evra@gmail.com</span></a></li></ul></div></div></div><hr><div class=container><div class="row text-start"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2024 Copyright.</div><div class="col-md-4 text-end"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script src=/application.100f2124055918d37ed55689f8b8cd9378a4ece97b585240e75bfd4894e0fe97.js integrity="sha256-EA8hJAVZGNN+1VaJ+LjNk3ik7Ol7WFJA51v9SJTg/pc=" defer></script></body></html>
