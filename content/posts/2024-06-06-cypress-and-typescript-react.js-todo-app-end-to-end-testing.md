@@ -9,7 +9,7 @@ categories:
   - React.js
 type: posts
 slug: cypress-typescript-react-js-todo-app-testing
-hero: /images/posts/2024-07-08-cypress-and-typescript-react.js-todo-app-end-to-end-testing.png
+hero: /images/posts/2024-06-06-cypress-and-typescript-react.js-todo-app-end-to-end-testing.png
 ---
 
 ### Introduction
