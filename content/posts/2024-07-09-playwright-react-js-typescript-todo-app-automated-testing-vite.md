@@ -5,8 +5,9 @@ date: 2024-07-09T20:22:16.664Z
 preview: ""
 draft: false
 tags: []
-categories: []
-hero: "/images/posts/2024-07-09-playwright-react-js-typescript-todo-app-automated-testing-vite.png"
+categories:
+  - React.js
+hero: /images/posts/2024-07-09-playwright-react-js-typescript-todo-app-automated-testing-vite.png
 type: posts
 slug: playwright-react-js-typescript-todo-app-automated-testing-vite
 ---
