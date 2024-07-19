@@ -7,6 +7,7 @@ draft: false
 tags: []
 categories:
   - React.js
+  - Testing
 hero: /images/posts/2024-06-30-react-js-typescript-todo-app-testing-jest-react-testing-library-vite.png
 type: posts
 slug: react-js-typescript-todo-app-testing-jest-react-testing-library-vite

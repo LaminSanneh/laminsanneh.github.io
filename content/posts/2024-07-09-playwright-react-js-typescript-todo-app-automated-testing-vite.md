@@ -7,6 +7,7 @@ draft: false
 tags: []
 categories:
   - React.js
+  - Testing
 hero: /images/posts/2024-07-09-playwright-react-js-typescript-todo-app-automated-testing-vite.png
 type: posts
 slug: playwright-react-js-typescript-todo-app-automated-testing-vite
