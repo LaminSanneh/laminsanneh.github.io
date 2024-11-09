@@ -63,7 +63,6 @@ The `backend` module will serve as an HTTP server. Let’s set up `restapi/backe
 3. **Write the `server.go` file**:
 
    ```go
-   // server.go
    package backend
 
    import (
@@ -71,7 +70,6 @@ The `backend` module will serve as an HTTP server. Let’s set up `restapi/backe
        "net/http"
    )
 
-   // StartServer starts a basic HTTP server
    func StartServer() {
        http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
            fmt.Fprintln(w, "<h1>Hello from Backend!</h1>")
@@ -114,7 +112,6 @@ Next, let's set up `restapi/maincaller`, which will call the `backend` module to
 3. **Write the `main.go` file**:
 
    ```go
-   // main.go
    package main
 
    import (
