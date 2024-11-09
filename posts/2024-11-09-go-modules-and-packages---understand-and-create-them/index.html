@@ -23,16 +23,14 @@ Initializing Go modules and packages. Using go mod edit and go mod tidy to set u
 </span></span></code></pre></div><p>Your <code>restapi/backend/go.mod</code> file should look like this with your current go version:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>module restapi01/backend
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>go 1.20
-</span></span></code></pre></div></li><li><p><strong>Write the <code>server.go</code> file</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#75715e>// server.go
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#f92672>package</span> <span style=color:#a6e22e>backend</span>
+</span></span></code></pre></div></li><li><p><strong>Write the <code>server.go</code> file</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>backend</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#f92672>import</span> (
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;fmt&#34;</span>
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;net/http&#34;</span>
 </span></span><span style=display:flex><span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// StartServer starts a basic HTTP server
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>StartServer</span>() {
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>StartServer</span>() {
 </span></span><span style=display:flex><span>    <span style=color:#a6e22e>http</span>.<span style=color:#a6e22e>HandleFunc</span>(<span style=color:#e6db74>&#34;/&#34;</span>, <span style=color:#66d9ef>func</span>(<span style=color:#a6e22e>w</span> <span style=color:#a6e22e>http</span>.<span style=color:#a6e22e>ResponseWriter</span>, <span style=color:#a6e22e>r</span> <span style=color:#f92672>*</span><span style=color:#a6e22e>http</span>.<span style=color:#a6e22e>Request</span>) {
 </span></span><span style=display:flex><span>        <span style=color:#a6e22e>fmt</span>.<span style=color:#a6e22e>Fprintln</span>(<span style=color:#a6e22e>w</span>, <span style=color:#e6db74>&#34;&lt;h1&gt;Hello from Backend!&lt;/h1&gt;&#34;</span>)
 </span></span><span style=display:flex><span>    })
@@ -46,8 +44,7 @@ Initializing Go modules and packages. Using go mod edit and go mod tidy to set u
 </span></span></code></pre></div><p>Your <code>restapi/backend/go.mod</code> file should look like this with your current go version:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>module restapi01/maincaller
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>go 1.20
-</span></span></code></pre></div></li><li><p><strong>Write the <code>main.go</code> file</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#75715e>// main.go
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+</span></span></code></pre></div></li><li><p><strong>Write the <code>main.go</code> file</strong>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#f92672>import</span> (
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;fmt&#34;</span>
