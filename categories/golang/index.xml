@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoLang on Lamin Sanneh</title><link>http://laminsanneh.com/categories/golang/</link><description>Recent content in GoLang on Lamin Sanneh</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 09 Nov 2024 14:11:14 +0000</lastBuildDate><atom:link href="http://laminsanneh.com/categories/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Go Local Modules and Packages - Understand How to Create and Use Them</title><link>http://laminsanneh.com/posts/2024-11-09-go-modules-and-packages---understand-and-create-them/</link><pubDate>Sat, 09 Nov 2024 14:11:14 +0000</pubDate><guid>http://laminsanneh.com/posts/2024-11-09-go-modules-and-packages---understand-and-create-them/</guid><description>&lt;h3 id="introduction">Introduction&lt;/h3>
+&lt;p>When building applications in Go, modularizing your code into separate modules and packages is essential for maintaining clean and reusable code. In this tutorial, we’ll walk through creating two local Go modules: &lt;code>restapi01/backend&lt;/code> and &lt;code>restapi/maincaller&lt;/code>. The &lt;code>backend&lt;/code> module will serve as a basic HTTP server that outputs a simple HTML view, while the &lt;code>maincaller&lt;/code> module will call functions from &lt;code>backend&lt;/code>.&lt;/p>
+&lt;p>We shall look into:&lt;/p>
+&lt;ol>
+&lt;li>Initializing Go modules and packages.&lt;/li>
+&lt;li>Using &lt;code>go mod edit&lt;/code> and &lt;code>go mod tidy&lt;/code> to set up local imports without publishing packages.&lt;/li>
+&lt;li>Testing the interaction between these modules and calling one from the other.&lt;/li>
+&lt;/ol>
+&lt;p>Let&amp;rsquo;s get started!&lt;/p></description></item></channel></rss>
