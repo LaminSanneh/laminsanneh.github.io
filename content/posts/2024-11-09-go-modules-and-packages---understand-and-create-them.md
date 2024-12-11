@@ -5,7 +5,8 @@ date: 2024-11-09T14:11:14.712Z
 preview: ""
 draft: false
 tags: []
-categories: []
+categories:
+   - GoLang
 hero: ""
 fmContentType: posts
 ---
