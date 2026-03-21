@@ -9,6 +9,8 @@ on:
 jobs:
   deploy-to-gh-pages:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
     # checkout to the commit that has been pushed
     - uses: actions/checkout@v4
@@ -22,15 +24,28 @@ jobs:
     # - name: Update Hugo Modules
     #   run: hugo mod tidy
 
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+    # - name: Setup Node
+    #   uses: actions/setup-node@v4
+    #   with:
+    #     node-version: 18
 
-    - name: Install node modules
-      run: |
-        hugo mod npm pack
-        npm install
+    # - name: Install node modules
+    #   run: |
+    #     hugo mod npm pack
+    #     npm install
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        # The action defaults to search for the dependency file (package-lock.json,
+        # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
+        # hash as a part of the cache key.
+        # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
+        cache-dependency-path: '**/package-lock.json'
+
+    - run: npm ci
+    - run: hugo --minify
 
     - name: Build
       run: hugo --minify
