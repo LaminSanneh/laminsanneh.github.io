@@ -34,7 +34,7 @@ languages:
   #   weight: 2
 # default language for the content
 defaultContentLanguage: en
-defaultContentLanguageInSubdir: falses
+defaultContentLanguageInSubdir: false
 
 # Allow raw html in markdown file
 markup:
