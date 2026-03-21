@@ -1,4 +1,4 @@
-baseURL: 'http://laminsanneh.com/'
+baseURL: 'http://laminscreativestudio.com/'
 
 languageCode: en
 title: "Lamin's Blog and Personal Portfolio Website"
@@ -266,7 +266,7 @@ params:
 
     # Number of posts to show to each page. Default is "12"
     pagination:
-       maxPostsPerPage: 12
+       maxPostsPerPage: 20
 
 
   # Provide footer configuration.
