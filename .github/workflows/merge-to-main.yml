@@ -18,14 +18,19 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-    - name: Check Hugo version
-      run: hugo version
+    - name: Setup Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.22'
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3.0.0
       with:
         hugo-version: 'latest'
         extended: true
+
+    - name: Check Hugo version
+      run: hugo version
 
     # - name: Update Hugo Modules
     #   run: hugo mod tidy
